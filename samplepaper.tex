@@ -16,7 +16,7 @@
 %
 \title{ Distributed population-based optimization for a fuzzy path tracking controller}
 %
-%\titlerunning{Abbreviated paper title}
+\titlerunning{Distributed population-based optimization}
 % If the paper title is too long for the running head, you can set
 % an abbreviated paper title here
 %
@@ -37,125 +37,188 @@ Department of Computer Engineering, Robotics and Automation, University of Grana
 \maketitle              % typeset the header of the contribution
 %
 \begin{abstract}
-    We propose a distributed bio-inspired algorithm to
-	optimize the parameters of a fuzzy controller, using a multi-population
-	multi-algorithmic approach. The proposed algorithm can mix different metaheuristics, one for each
-	population, as this can keep the total diversity high. To validate the speed-up
-    benefit of our proposal, we optimized the membership functions of a fuzzy controller
-	for the trajectory tracking of a mobile autonomous robot using
-	distributed versions of Genetic Algorithms, Particle Swarm
-	Optimization, and a mixed metaheuristics configuration. 
-    Results indicate that even
-	when we use random heterogeneous parameter configuration for the
-	distributed populations, we obtain an error similar to other works 
-	while significantly reducing the execution time. This is a summary of our work
-    ``Distributed and asynchronous population-based optimization applied to the optimal
-    design of fuzzy controllers'' published in Symmetry in 2023. 
-
+    We propose a distributed bio-inspired algorithm to optimize the parameters
+    of a fuzzy controller, using a multi-population multi-algorithmic approach.
+    The proposed algorithm can mix different metaheuristics, one for each
+    population, with the aim of keeping the total population diversity high. To validate the
+    speed-up benefit of our proposal, we optimized the membership functions of
+    a fuzzy controller for the trajectory tracking of a mobile autonomous robot
+    using populations running only Genetic Algorithms and Particle Swarm
+    Optimization, and a mixed configuration where both algorithms run at the same time. Results indicate
+    that even when we use random heterogeneous parameter configuration for the
+    distributed populations, we obtain an error similar to other works while
+    significantly reducing the execution time. 
+    \textit{ 
+     This is a summary of our work
+    ``Distributed and asynchronous population-based optimization applied to the
+    optimal design of fuzzy controllers'' published in Symmetry in 2023. \cite{garcia2023}} 
 \keywords{Fuzzy Control  \and Bio-inpired Algorithms \and Distribuited Algorithms.}
 \end{abstract}
 %
 %
 %
-\section{First Section}
-\subsection{A Subsection Sample}
-Please note that the first paragraph of a section or subsection is
-not indented. The first paragraph that follows a table, figure,
-equation etc. does not need an indent, either.
+\section{Introduction}
 
-Subsequent paragraphs, however, are indented.
+Fuzzy logic control has been one of the most successful intelligent control
+techniques \cite{Driankov2013Fuzzy}. One advantage being the use of a fuzzy
+inference system (FIS) that models the system using fuzzy rules as the
+knowladge base. These rules have human interpretation but need to be
+automatically or manually tuned, to handle the particularities of real-world
+problems. In the case of FISs, the core components are the fuzzy propositions
+constructing the fuzzy rules, these propositions are, in turn, constructed
+using fuzzy variables and fuzzy terms that are defined using MFs. Optimizing
+the MFs parameters is challenging; as we need to execute one or more
+simulations to establish the performance of just one configuration.
 
-\subsubsection{Sample Heading (Third Level)} Only two levels of
-headings should be numbered. Lower level headings remain unnumbered;
-they are formatted as run-in headings.
+Our main contribution is to propose a distributed optimization method that
+speeds up the tuning of fuzzy control optimization problems with respect to
+sequential versions, without increasing the complexity for the user. This work
+proposes a multi-population, distributed optimization method considering
+current practices in constructing highly scalable, resilient, and replicable
+systems. Moreover, the architecture is capable of executing several
+bio-inspired algorithms simultaneously. We also address the problem of setting
+the parameters for each population, this is an important factor in
+multi-populations algorithms because it has been found in other works to have
+an impact on the execution time and the optimization results. We compare two
+strategies: the homogeneous setting using the same parameters in all
+populations, and the other, a heterogeneous strategy using distinct parameters
+for all populations.
 
-\paragraph{Sample Heading (Fourth Level)}
-The contribution should contain no more than four levels of
-headings. Table~\ref{tab1} gives a summary of all heading levels.
+\section{Proposed Method}
 
-\begin{table}
-\caption{Table captions should be placed above the
-tables.}\label{tab1}
-\begin{tabular}{|l|l|l|}
-\hline
-Heading level &  Example & Font size and style\\
-\hline
-Title (centered) &  {\Large\bfseries Lecture Notes} & 14 point, bold\\
-1st-level heading &  {\large\bfseries 1 Introduction} & 12 point, bold\\
-2nd-level heading & {\bfseries 2.1 Printing Area} & 10 point, bold\\
-3rd-level heading & {\bfseries Run-in Heading in Bold.} Text follows & 10 point, bold\\
-4th-level heading & {\itshape Lowest Level Heading.} Text follows & 10 point, italic\\
-\hline
-\end{tabular}
-\end{table}
-
-
-\noindent Displayed equations are centered and set on a separate
-line.
-\begin{equation}
-x + y = z
-\end{equation}
-Please try to avoid rasterized images for line-art diagrams and
-schemas. Whenever possible, use vector graphics instead (see
-Fig.~\ref{fig1}).
+In this model, we have a  multi-population cycle in which a set of populations
+$P$, each in a current state $j$, and a set ($W$) of $w$ workers, is added to a
+message queue. Then each population ($population_{i}$) is pulled set of
+populations by one of the workers. Then, after executing a metaheuristic, it
+sends the evolved population ($X_{j+1}$) to the \emph{mixer}. The the
+\emph{mixer} swaps some candidate solutions between two populations, changing
+their state again and sending the resulting populations again to the input
+message queue to be processed again by some worker, closing the cycle. Each
+population has several parameters, including the algoritm to be executed on
+that particular population, and the parameters of that metaheuristic. A single
+population is executed several times during the lifetime of the algorithm, and
+this number is limited by the parameter $nc$ (number of cycles).  A schematic
+of an execution cycle is shown in Figure~\ref{fig:worker-pop}. A worker is an
+agent running in a single process or thread. The worker pulls population
+messages from a queue and executes the specified metaheuristic.
 
 \begin{figure}
-\includegraphics[width=\textwidth]{fig1.eps}
-\caption{A figure caption is always placed below the illustration.
-Please note that short captions are centered, while long ones are
-justified by the macro package automatically.} \label{fig1}
+\includegraphics[width=\textwidth]{images/worker-pop}
+    \caption{ The multi-population cycle consists of a set of populations $P$, each in a
+current state $j$, and a set ($W$) of $w$ workers. Each population
+($population_{i}$) is received by one of the workers. Then, after executing a
+metaheuristic, it sends the evolved population ($X_{j+1}$) to the
+\emph{mixer}. In turn, the \emph{mixer} swaps some candidate
+solutions between two populations, changing their state again and sending the
+resulting populations again to be processed by workers, closing the cycle.
+}\label{fig:worker-pop}
 \end{figure}
 
-\begin{theorem}
-This is a sample theorem. The run-in heading is set in bold, while
-the following text appears in italics. Definitions, lemmas,
-propositions, and corollaries are styled the same way.
-\end{theorem}
+\section{Experimental Results}
+
+To validate the algorithm’s speed-up and optimization capabilities, we selected
+the computationally demanding task of tuning a path-tracking fuzzy controller
+for a bicycle-like mobile robot. The fuzzy controller we optimize in this work
+has two input variables $\theta_e$ and $e$, indicating the angular error and
+the distance  to the desired path. The controller has a single output $\omega$,
+used for steering the front wheel. All three variables have the same
+granularity using five fuzzy terms: \emph{high negative}, \emph{medium
+negative}, \emph{low}, \emph{medium positive}, and \emph{high positive}. The
+sign of the error indicates if the angle is to the left or right of the path.
+We used 15 parameters for the MFs. To test each controller, they had to guide
+the robot thru three paths. These paths where defined using a cubic splines.
+The average RMSE obtained from these simulations are the fitness of each 
+controller. We selected the GA and PSO algorithms for the multi-population-based
+algorithms, we selected the GA as lower-end algorithm specilized in conbinatorial 
+optimization and on the other hand, the PSO algorithm which had the best results in
+previous experiments. Furthermore, in previous works, but using
+continuous optimization benchmarks, the combination of both metaheuristics
+performed better than any of them in isolation.
+
+When selecting the mataheuristic's parameters, we also experimented with two
+strategies, one stablishing the same parameters for all populations, these
+parameters are selected after running more than 30 trial experiments, we call
+this an homogeneous parametrization. The other option is using a heterogeneous
+strategy proposed by Gong et al. \cite{gong2011distributed} that randomly sets
+the parameters of each population. For the GA, we used a tournament selection
+with ($k=3$), a Gaussian mutation with $\mu = 0.0$ and $\sigma = 0.2$, and a
+probability of $0.3$. We use a one-point crossover with a probability of $0.7$.
+For the sequential PSO algorithm, we used a minimum and maximum speeds of
+$-0.25$ and $0.25$, respectively, and $C_1=2$ and $C_2=2$. In the sequential
+case, both algorithms have a single population of 50 candidate solutions and
+run for 20 iterations. In the sequential version, the number of function
+evaluations is 1000. This number is obtained by multiplying the population size
+by the number of iterations. For the multi-population versions of the GA and
+PSO algorithms. We used the same parameters as the sequential versions for the
+homogeneous parametrization. We used the same parameters for the heterogeneous
+versions as before, except for the following parameters affecting the
+exploration-exploitation balance in the GA and PSO algorithms. The mutation
+probability is selected for the GA from the $[0.1,0.5]$ range and the crossover
+probability from $[0.3,0.9]$. For the PSO algorithm, we also selected the
+minimum speed between $[-0.30,-0.20]$ and the maximum from $[0.20,0.30]$. Both
+$C_1$ and $C_2$ are in the $[1.0,2.0]$ range. For all the distributed versions,
+we set the number of populations (islands) to seven, each with a population
+size of nine. Each worker will execute four iterations (generations) of the
+algorithm. All populations will complete four cycles; this means they will pass
+through the mixer module four times. As a result, the total number of function
+evaluations is 1008. About the same as the sequential, single-population
+versions. The results are shown in Table~\ref{tab:speedup}.
+
+
+\begin{table}[]
+\caption{
+    Results from 30 observations of the execution time for each of the
+    presented algorithms. The execution time is expressed in seconds. The table
+    shows the results for the sequential (first two columns) and distributed
+    versions of the multi-population-based algorithms: GA, PSO, and the combined
+    version PSO-GA. The homogeneous versions are on the left side and
+    heterogeneous versions on the right.
+    }\label{tab:speedup}
+\renewcommand*{\arraystretch}{1.4}
+\setlength{\tabcolsep}{5pt}
+    \begin{small}
+\begin{tabular}{lrrrrrrrr}
+    \hline
+				&  \multicolumn{2}{c}{Sequential} & \multicolumn{6}{c}{Distributed} \\
+    \hline
+    & &    & \multicolumn{3}{c}{Homogeneous} & \multicolumn{3}{c}{Heterogeneous} \\
+    \cline{4-6} \cline{7-9}
+       & \multicolumn{1}{c}{GA} & \multicolumn{1}{c}{PSO} &\multicolumn{1}{c}{GA} & \multicolumn{1}{c}{PSO} & \multicolumn{1}{c}{PSO-GA} &\multicolumn{1}{c}{GA} & \multicolumn{1}{c}{PSO} & \multicolumn{1}{c}{PSO-GA}\\
+    \hline
+    Speedup & \multicolumn{1}{c}{-} & \multicolumn{1}{c}{-} & 4.74 & 6.86 & 6.60 & 5.05 & 6.84 & \underline{6.95} \\
+    \hline
+Avg.   & 1999.34 & 2851.61 & 421.67 & 415.64 & 431.52 & 395.75 & 415.79 & 409.90 \\
+    \hline
+StD.   & 82.44   & 278.73  & 28.54           & 23.47                    & 22.60           & 26.54           & 20.47           & 24.85    \\
+    \hline
+Min    & 1876.40 & 2457.98 & 364.65          & 365.81                   & 394.61          & 340.65          & 374.83          & 372.20   \\
+    \hline
+Max    & 2253.71 & 3822.01 & 526.76          & 467.47                   & 478.80          & 461.46          & 461.96          & 465.27  \\
+    \hline
+\end{tabular}
+    \end{small}
+\end{table}
+
+\section{Concluding Remarks}
+
+These results confirm that a multi-population-based strategy offers a
+convenient speedup while keeping the results very similar to their sequential
+counterparts. Moreover, the combined algorithm offers better execution times,
+combining the continuous optimization capabilities of a PSO algorithm with the
+faster GA metaheuristic. Moreover, the randomized configuration parameters
+heterogeneous strategy gave better execution times when using the PSO-GA
+variant.
+
 %
 % the environments 'definition', 'lemma', 'proposition', 'corollary',
 % 'remark', and 'example' are defined in the LLNCS documentclass as well.
-%
-\begin{proof}
-Proofs, examples, and remarks have the initial word in italics,
-while the following text appears in normal font.
-\end{proof}
-For citations of references, we prefer the use of square brackets
-and consecutive numbers. Citations using labels or the author/year
-convention are also acceptable. The following bibliography provides
-a sample reference list with entries for journal
-articles~\cite{ref_article1}, an LNCS chapter~\cite{ref_lncs1}, a
-book~\cite{ref_book1}, proceedings without editors~\cite{ref_proc1},
-and a homepage~\cite{ref_url1}. Multiple citations are grouped
-\cite{ref_article1,ref_lncs1,ref_book1},
-\cite{ref_article1,ref_book1,ref_proc1,ref_url1}.
 %
 % ---- Bibliography ----
 %
 % BibTeX users should specify bibliography style 'splncs04'.
 % References will then be sorted and formatted in the correct style.
 %
-% \bibliographystyle{splncs04}
-% \bibliography{mybibliography}
+\bibliographystyle{splncs04}
+\bibliography{symmetry}
 %
-\begin{thebibliography}{8}
-\bibitem{ref_article1}
-Author, F.: Article title. Journal \textbf{2}(5), 99--110 (2016)
-
-\bibitem{ref_lncs1}
-Author, F., Author, S.: Title of a proceedings paper. In: Editor,
-F., Editor, S. (eds.) CONFERENCE 2016, LNCS, vol. 9999, pp. 1--13.
-Springer, Heidelberg (2016). \doi{10.10007/1234567890}
-
-\bibitem{ref_book1}
-Author, F., Author, S., Author, T.: Book title. 2nd edn. Publisher,
-Location (1999)
-
-\bibitem{ref_proc1}
-Author, A.-B.: Contribution title. In: 9th International Proceedings
-on Proceedings, pp. 1--2. Publisher, Location (2010)
-
-\bibitem{ref_url1}
-LNCS Homepage, \url{http://www.springer.com/lncs}. Last accessed 4
-Oct 2017
-\end{thebibliography}
 \end{document}

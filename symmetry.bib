@@ -1,0 +1,1602 @@
+
+@Article{garcia2023,
+AUTHOR = {García-Valdez, Mario and Mancilla, Alejandra and Castillo, Oscar and Merelo-Guervós, Juan Julián},
+TITLE = {Distributed and Asynchronous Population-Based Optimization Applied to the Optimal Design of Fuzzy Controllers},
+JOURNAL = {Symmetry},
+VOLUME = {15},
+YEAR = {2023},
+NUMBER = {2},
+ARTICLE-NUMBER = {467},
+URL = {https://www.mdpi.com/2073-8994/15/2/467},
+ISSN = {2073-8994},
+ABSTRACT = {Designing a controller is typically an iterative process during which engineers must assess the performance of a design through time-consuming simulations; this becomes even more burdensome when using a population-based metaheuristic that evaluates every member of the population. Distributed algorithms can mitigate this issue, but these come with their own challenges. This is why, in this work, we propose a distributed and asynchronous bio-inspired algorithm to execute the simulations in parallel, using a multi-population multi-algorithmic approach. Following a cloud-native pattern, isolated populations interact asynchronously using a distributed message queue, which avoids idle cycles when waiting for other nodes to synchronize. The proposed algorithm can mix different metaheuristics, one for each population, first because it is possible and second because it can help keep total diversity high. To validate the speedup benefit of our proposal, we optimize the membership functions of a fuzzy controller for the trajectory tracking of a mobile autonomous robot using distributed versions of genetic algorithms, particle swarm optimization, and a mixed-metaheuristic configuration. We compare sequential versus distributed implementations and demonstrate the benefits of mixing the populations with distinct metaheuristics. We also propose a simple migration strategy that delivers satisfactory results. Moreover, we compare homogeneous and heterogenous configurations for the populations&rsquo; parameters. The results show that even when we use random heterogeneous parameter configuration in the distributed populations, we obtain an error similar to that in other work while significantly reducing the execution time.},
+DOI = {10.3390/sym15020467}}
+
+@article{pang2022data,
+  title={Data-Driven Adaptive Control: An Incremental Triangular Dynamic Linearization Approach},
+  author={Pang, Zhong-Hua and Ma, Biao and Liu, Guo-Ping and Han, Qing-Long},
+  journal={IEEE Transactions on Circuits and Systems II: Express Briefs},
+  year={2022},
+  publisher={IEEE}
+}
+@article{ahn2007iterative,
+  title={Iterative learning control: Brief survey and categorization},
+  author={Ahn, Hyo-Sung and Chen, YangQuan and Moore, Kevin L},
+  journal={IEEE Transactions on Systems, Man, and Cybernetics, Part C (Applications and Reviews)},
+  volume={37},
+  number={6},
+  pages={1099--1121},
+  year={2007},
+  publisher={IEEE}
+}
+
+@article{bisoffi2022data,
+  title={Data-driven control via Petersen’s lemma},
+  author={Bisoffi, Andrea and De Persis, Claudio and Tesi, Pietro},
+  journal={Automatica},
+  volume={145},
+  pages={110537},
+  year={2022},
+  publisher={Elsevier}
+}
+
+@book{brunton2022data,
+  title={Data-driven science and engineering: Machine learning, dynamical systems, and control},
+  author={Brunton, Steven L and Kutz, J Nathan},
+  year={2022},
+  publisher={Cambridge University Press}
+}
+@book{sutton2018reinforcement,
+  title={Reinforcement learning: An introduction},
+  author={Sutton, Richard S and Barto, Andrew G},
+  year={2018},
+  publisher={MIT press}
+}
+
+@article{hou2013model,
+  title={From model-based control to data-driven control: Survey, classification and perspective},
+  author={Hou, Zhong-Sheng and Wang, Zhuo},
+  journal={Information Sciences},
+  volume={235},
+  pages={3--35},
+  year={2013},
+  publisher={Elsevier}
+}
+@article{kalman1960new,
+    author = {Kalman, R. E.},
+    title = "{A New Approach to Linear Filtering and Prediction Problems}",
+    journal = {Journal of Basic Engineering},
+    volume = {82},
+    pages = {35-45},
+    year = {1960},
+    month = {03},
+    issn = {0021-9223},
+    doi = {10.1115/1.3662552},
+    url = {https://doi.org/10.1115/1.3662552}
+}
+
+@incollection{grantner1996parallel,
+  title={Parallel algorithm for fuzzy logic controller},
+  author={Grantner, Janos L},
+  booktitle={Fuzzy Logic},
+  pages={177--195},
+  year={1996},
+  publisher={Springer}
+}
+
+@inproceedings{ciurea2013determining,
+  title={Determining the parameters of a Sugeno fuzzy controller using a parallel genetic algorithm},
+  author={Ciurea, Stelian},
+  booktitle={2013 19th International Conference on Control Systems and Computer Science},
+  pages={36--43},
+  year={2013},
+  organization={IEEE}
+}
+
+@article{oh2009design,
+  title={The design of a fuzzy cascade controller for ball and beam system: A study in optimization with the use of parallel genetic algorithms},
+  author={Oh, Sung-Kwun and Jang, Han-Jong and Pedrycz, Witold},
+  journal={Engineering Applications of Artificial Intelligence},
+  volume={22},
+  number={2},
+  pages={261--271},
+  year={2009},
+  publisher={Elsevier}
+}
+
+@article{cortes2014optimal,
+  title={Optimal design of interval type 2 fuzzy controllers based on a simple tuning algorithm},
+  author={Cortes-Rios, Julio Cesar and G{\'o}mez-Ram{\'\i}rez, Eduardo and Ortiz-de-la-Vega, Hector Alejandro and Castillo, Oscar and Melin, Patricia},
+  journal={Applied Soft Computing},
+  volume={23},
+  pages={270--285},
+  year={2014},
+  publisher={Elsevier}
+}
+
+@inproceedings{gong2011distributed,
+  title={Distributed island-model genetic algorithms using heterogeneous parameter settings},
+  author={Gong, Yiyuan and Fukunaga, Alex},
+  booktitle={2011 IEEE Congress of Evolutionary Computation (CEC)},
+  pages={820--827},
+  year={2011},
+  organization={IEEE}
+}
+@article{touati2013speedup,
+  title={The Speedup-Test: a statistical methodology for programme speedup analysis and computation},
+  author={Touati, Sid-Ahmed-Ali and Worms, Julien and Briais, S{\'e}bastien},
+  journal={Concurrency and computation: practice and experience},
+  volume={25},
+  number={10},
+  pages={1410--1426},
+  year={2013},
+  publisher={Wiley Online Library}
+}
+@book{yang2013swarm,
+  title={Swarm intelligence and bio-inspired computation: theory and applications},
+  author={Yang, Xin-She and Cui, Zhihua and Xiao, Renbin and Gandomi, Amir Hossein and Karamanoglu, Mehmet},
+  year={2013},
+  publisher={Newnes}
+}
+
+@incollection{de1998feedback,
+  title={Feedback control of a nonholonomic car-like robot},
+  author={De Luca, Alessandro and Oriolo, Giuseppe and Samson, Claude},
+  booktitle={Robot motion planning and control},
+  pages={171--253},
+  year={1998},
+  publisher={Springer}
+}
+@inproceedings{garcia2021event,
+  title={Event-Driven Multi-algorithm Optimization: Mixing Swarm and Evolutionary Strategies},
+  author={Garc{\'\i}a-Valdez, Mario and Merelo, Juan J},
+  booktitle={International Conference on the Applications of Evolutionary Computation (Part of EvoStar)},
+  pages={747--762},
+  year={2021},
+  organization={Springer}
+}
+@inproceedings{merelo2016ranking,
+  title={Ranking the Performance of Compiled and Interpreted Languages in Genetic Algorithms},
+  author={Merelo-Guerv{\'o}s, Juan Juli{\'a}n and Blancas-Alvarez, Israel and Castillo, Pedro A and Romero, Gustavo and Garc{\'\i}a-S{\'a}nchez, Pablo and Rivas, Victor M and Garc{\'\i}a-Valdez, Mario and Hern{\'a}ndez-{\'A}guila, Amaury and Rom{\'a}n, Mario},
+  booktitle={International Conference on Evolutionary Computation Theory and Applications},
+  volume={2},
+  pages={164--170},
+  year={2016},
+  organization={SCITEPRESS}
+}
+@inproceedings{merelo2018performance,
+  title={Performance improvements of evolutionary algorithms in {Perl} 6},
+  author={Merelo-Guerv{\'o}s, Juan-Juli{\'a}n and Garc{\'\i}a-Valdez, Jos{\'e}-Mario},
+  booktitle={Proceedings of the Genetic and Evolutionary Computation Conference Companion},
+  pages={1371--1378},
+  year={2018}
+}
+
+@inproceedings{merelo2019exploring,
+  title={Exploring concurrent and stateless evolutionary algorithms},
+  author={Merelo, Juan J and Laredo, Juan Luis Jim{\'e}nez and Castillo, Pedro A and Garc{\'\i}a-Valdez, Jos{\'e}-Mario and Rojas-Galeano, Sergio},
+  booktitle={International Conference on the Applications of Evolutionary Computation (Part of EvoStar)},
+  pages={405--412},
+  year={2019},
+  organization={Springer}
+}
+@article{talukdar1998asynchronous,
+  title={Asynchronous teams: Cooperation schemes for autonomous agents},
+  author={Talukdar, Sarosh and Baerentzen, Lars and Gove, Andrew and De Souza, Pedro},
+  journal={Journal of Heuristics},
+  volume={4},
+  number={4},
+  pages={295--321},
+  year={1998},
+  publisher={Springer}
+}
+
+@inproceedings{merelo2012sofea,
+  title={{SofEA}: A pool-based framework for evolutionary algorithms using couchdb},
+  author={Merelo, Juan J and Fernandes, Carlos M and Mora, Antonio M and Esparcia, Anna I},
+  booktitle={Proceedings of the 14th annual conference companion on Genetic and evolutionary computation},
+  pages={109--116},
+  year={2012}
+}
+
+@inproceedings{roy2009distributed,
+  title={A distributed pool architecture for genetic algorithms},
+  author={Roy, Gautam and Lee, Hyunyoung and Welch, Jennifer L and Zhao, Yuan and Pandey, Vijitashwa and Thurston, Deborah},
+  booktitle={2009 IEEE Congress on Evolutionary Computation},
+  pages={1177--1184},
+  year={2009},
+  organization={IEEE}
+}
+@article{garcia2015evospace,
+  title={The EvoSpace model for pool-based evolutionary algorithms},
+  author={Garc{\'\i}a-Valdez, Mario and Trujillo, Leonardo and Merelo, Juan-J and Fernandez de Vega, Francisco and Olague, Gustavo},
+  journal={Journal of Grid Computing},
+  volume={13},
+  number={3},
+  pages={329--349},
+  year={2015},
+  publisher={Springer}
+}
+
+@inproceedings{garcia2013evospace,
+  title={EvoSpace: a distributed evolutionary platform based on the tuple space model},
+  author={Garc{\'\i}a-Valdez, Mario and Trujillo, Leonardo and Fern{\'a}ndez de Vega, Francisco and Merelo Guerv{\'o}s, Juan J and Olague, Gustavo},
+  booktitle={European conference on the applications of evolutionary computation},
+  pages={499--508},
+  year={2013},
+  organization={Springer}
+}
+
+@inproceedings{khalloof2018generic,
+  title={A generic distributed microservices and container based framework for metaheuristic optimization},
+  author={Khalloof, Hatem and Jakob, Wilfried and Liu, Jianlei and Braun, Eric and Shahoud, Shadi and Duepmeier, Clemens and Hagenmeyer, Veit},
+  booktitle={Proceedings of the genetic and evolutionary computation conference companion},
+  pages={1363--1370},
+  year={2018}
+}
+@inproceedings{jankee2016fitness,
+  title={A fitness cloud model for adaptive metaheuristic selection methods},
+  author={Jankee, Christopher and Verel, S{\'e}bastien and Derbel, Bilel and Fonlupt, Cyril},
+  booktitle={International Conference on Parallel Problem Solving from Nature},
+  pages={80--90},
+  year={2016},
+  organization={Springer}
+}
+
+@inproceedings{merelo2018introducing,
+  title={Introducing an event-based architecture for concurrent and distributed evolutionary algorithms},
+  author={Merelo Guerv{\'o}s, Juan J and Garc{\'\i}a-Valdez, J Mario},
+  booktitle={International Conference on Parallel Problem Solving from Nature},
+  pages={399--410},
+  year={2018},
+  organization={Springer}
+}
+
+@article{valdez2021container,
+  title={A container-based cloud-native architecture for the reproducible execution of multi-population optimization algorithms},
+  author={Valdez, Mario Garc{\'\i}a and Merelo-Guerv{\'o}s, Juan J},
+  journal={Future Generation Computer Systems},
+  volume={116},
+  pages={234--252},
+  year={2021},
+  publisher={Elsevier}
+}
+
+@article{dziurzanski2020scalable,
+  title={Scalable distributed evolutionary algorithm orchestration using Docker containers},
+  author={Dziurzanski, Piotr and Zhao, Shuai and Przewozniczek, Michal and Komarnicki, Marcin and Indrusiak, Leandro Soares},
+  journal={Journal of Computational Science},
+  volume={40},
+  pages={101069},
+  year={2020},
+  publisher={Elsevier}
+}
+
+@article{SalzaF19,
+  author    = {Pasquale Salza and
+               Filomena Ferrucci},
+  title     = {Speed up genetic algorithms in the cloud using software containers},
+  journal   = {Future Gener. Comput. Syst.},
+  volume    = {92},
+  pages     = {276--289},
+  year      = {2019},
+  url       = {https://doi.org/10.1016/j.future.2018.09.066},
+  doi       = {10.1016/j.future.2018.09.066},
+  timestamp = {Wed, 19 Feb 2020 14:15:43 +0100},
+  biburl    = {https://dblp.org/rec/journals/fgcs/SalzaF19.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+@inproceedings{DBLP:conf/gecco/ArenasGCLRM11,
+  author    = {Maribel Garc{\'{\i}}a Arenas and
+               Juan Juli{\'{a}}n Merelo Guerv{\'{o}}s and
+               Pedro A. Castillo and
+               Juan Luis Jim{\'{e}}nez Laredo and
+               Gustavo Romero and
+               Antonio Miguel Mora},
+  editor    = {Natalio Krasnogor and
+               Pier Luca Lanzi},
+  title     = {Using free cloud storage services for distributed evolutionary algorithms},
+  booktitle = {13th Annual Genetic and Evolutionary Computation Conference, {GECCO}
+               2011, Proceedings, Dublin, Ireland, July 12-16, 2011},
+  pages     = {1603--1610},
+  publisher = {{ACM}},
+  year      = {2011},
+  url       = {https://doi.org/10.1145/2001576.2001792},
+  doi       = {10.1145/2001576.2001792},
+  timestamp = {Tue, 29 Dec 2020 18:42:38 +0100},
+  biburl    = {https://dblp.org/rec/conf/gecco/ArenasGCLRM11.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+@article{ivanovic2022efficient,
+  title={Efficient evolutionary optimization using predictive auto-scaling in containerized environment},
+  author={Ivanovic, Milos and Simic, Visnja},
+  journal={Applied Soft Computing},
+  volume={129},
+  pages={109610},
+  year={2022},
+  publisher={Elsevier}
+}
+
+@inproceedings{mancilla2022mixing,
+  title={Mixing Population-Based Metaheuristics: An Approach Based on a Distributed-Queue for the Optimal Design of Fuzzy Controllers},
+  author={Mancilla, Alejandra and Castillo, Oscar and Valdez, Mario Garc{\'\i}a},
+  booktitle={International Conference on Intelligent and Fuzzy Systems},
+  pages={839--846},
+  year={2022},
+  organization={Springer}
+}
+
+@book{scholl2019cloud,
+  title={Cloud Native: Using Containers, Functions, and Data to Build Next-Generation Applications},
+  author={Scholl, Boris and Swanson, Trent and Jausovec, Peter},
+  year={2019},
+  publisher={" O'Reilly Media, Inc."}
+}
+
+@article{kratzke2017understanding,
+  title={Understanding cloud-native applications after 10 years of cloud computing--a systematic mapping study},
+  author={Kratzke, Nane and Quint, Peter-Christian},
+  journal={Journal of Systems and Software},
+  volume={126},
+  pages={1--16},
+  year={2017},
+  publisher={Elsevier}
+}
+@article{malawski2017serverless,
+title = "Serverless execution of scientific workflows: Experiments with HyperFlow, AWS Lambda and Google Cloud Functions",
+journal = "Future Generation Computer Systems",
+volume = "110",
+pages = "502 - 514",
+year = "2020",
+issn = "0167-739X",
+doi = "https://doi.org/10.1016/j.future.2017.10.029",
+url = "http://www.sciencedirect.com/science/article/pii/S0167739X1730047X",
+author = "Maciej Malawski and Adam Gajek and Adam Zima and Bartosz Balis and Kamil Figiela",
+keywords = "Scientific workflows, Cloud functions, Serverless architectures, FaaS",
+abstract = "Scientific workflows consisting of a high number of interdependent tasks represent an important class of complex scientific applications. Recently, a new type of serverless infrastructures has emerged, represented by such services as Google Cloud Functions and AWS Lambda, also referred to as the Function-as-a-Service model. In this paper we take a look at such serverless infrastructures, which are designed mainly for processing background tasks of Web and Internet of Things applications, or event-driven stream processing. We evaluate their applicability to more compute- and data-intensive scientific workflows and discuss possible ways to repurpose serverless architectures for execution of scientific workflows. We have developed prototype workflow executor functions using AWS Lambda and Google Cloud Functions, coupled with the HyperFlow workflow engine. These functions can run workflow tasks in AWS and Google infrastructures, and feature such capabilities as data staging to/from S3 or Google Cloud Storage and execution of custom application binaries. We have successfully deployed and executed the Montage astronomy workflow, often used as a benchmark, and we report on initial results of its performance evaluation. Our findings indicate that the simple mode of operation makes this approach easy to use, although there are costs involved in preparing portable application binaries for execution in a remote environment. While our solution is an early prototype, we find the presented approach highly promising. We also discuss possible future steps related to execution of scientific workflows in serverless infrastructures. Finally, we perform a cost analysis and discuss implications with regard to resource management for scientific applications in general."
+}
+
+@book{gilbert2018cloud,
+  title={Cloud Native Development Patterns and Best Practices: Practical architectural patterns for building modern, distributed cloud-native systems},
+  author={Gilbert, John},
+  year={2018},
+  publisher={Packt Publishing Ltd}
+}
+
+@article{arellano2017new,
+  title={A New Efficient Entropy Population-Merging Parallel Model for Evolutionary Algorithms.},
+  author={Arellano-Verdejo, Javier and Godoy-Calderon, Salvador and Alonso-Pecina, Federico and Guzm{\'a}n-Arenas, Adolfo and Cruz-Chavez, Marco Antonio},
+  journal={Int. J. Comput. Intell. Syst.},
+  volume={10},
+  number={1},
+  pages={1186--1197},
+  year={2017}
+}
+
+}
+@inproceedings{dorigo1999ant,
+	author = {Dorigo, Marco and Di Caro, Gianni},
+	booktitle = {Proceedings of the 1999 congress on evolutionary computation-CEC99 (Cat. No. 99TH8406)},
+	date-added = {2022-11-08 2:30:13 p.m. -0800},
+	date-modified = {2022-11-08 2:30:13 p.m. -0800},
+	organization = {IEEE},
+	pages = {1470--1477},
+	title = {Ant colony optimization: a new meta-heuristic},
+	volume = {2},
+	year = {1999}}
+
+@article{holland1962outline,
+	author = {Holland, John H},
+	date-added = {2022-11-08 2:11:14 p.m. -0800},
+	date-modified = {2022-11-08 2:11:14 p.m. -0800},
+	journal = {Journal of the ACM (JACM)},
+	number = {3},
+	pages = {297--314},
+	publisher = {ACM New York, NY, USA},
+	title = {Outline for a logical theory of adaptive systems},
+	volume = {9},
+	year = {1962}}
+
+@article{li2015multi,
+	author = {Li, Changhe and Nguyen, Trung Thanh and Yang, Ming and Yang, Shengxiang and Zeng, Sanyou},
+	date-added = {2022-11-08 9:43:35 a.m. -0800},
+	date-modified = {2022-11-08 9:43:35 a.m. -0800},
+	journal = {Information Sciences},
+	pages = {95--118},
+	publisher = {Elsevier},
+	title = {Multi-population methods in unconstrained continuous dynamic environments: The challenges},
+	volume = {296},
+	year = {2015}}
+
+@article{muhlenbein1988evolution,
+	author = {M{\"u}hlenbein, Heinz and Gorges-Schleuter, Martina and Kr{\"a}mer, Ottmar},
+	date-added = {2022-11-08 9:33:33 a.m. -0800},
+	date-modified = {2022-11-08 9:33:33 a.m. -0800},
+	journal = {Parallel computing},
+	number = {1},
+	pages = {65--85},
+	publisher = {Elsevier},
+	title = {Evolution algorithms in combinatorial optimization},
+	volume = {7},
+	year = {1988}}
+
+@book{siddique2013intelligent,
+	author = {Siddique, Nazmul},
+	date-added = {2022-11-03 8:43:37 a.m. -0700},
+	date-modified = {2022-11-03 8:43:37 a.m. -0700},
+	publisher = {Springer},
+	title = {Intelligent control: a hybrid approach based on fuzzy logic, neural networks and genetic algorithms},
+	volume = {517},
+	year = {2013}}
+
+@article{fu1971learning,
+	author = {Fu, KS},
+	date-added = {2022-11-03 8:17:25 a.m. -0700},
+	date-modified = {2022-11-03 8:17:25 a.m. -0700},
+	journal = {IEEE Transactions on Automatic Control},
+	number = {1},
+	pages = {70--72},
+	publisher = {IEEE},
+	title = {Learning control systems and intelligent control systems: An intersection of artifical intelligence and automatic control},
+	volume = {16},
+	year = {1971}}
+
+@article{zadeh1973outline,
+	author = {Zadeh, Lotfi A},
+	journal = {IEEE Transactions on systems, Man, and Cybernetics},
+	number = {1},
+  volume={SMC-3},
+	pages = {28--44},
+	publisher = {IEEE},
+	title = {Outline of a new approach to the analysis of complex systems and decision processes},
+	year = {1973}}
+
+@article{zadeh1965fuzzy,
+	author = {Zadeh, Lotfi A},
+	date-added = {2022-11-03 8:09:16 a.m. -0700},
+	date-modified = {2022-11-03 8:09:16 a.m. -0700},
+	journal = {Information and control},
+	number = {3},
+	pages = {338--353},
+	publisher = {Elsevier},
+	title = {Fuzzy sets},
+	volume = {8},
+	year = {1965}}
+
+@article{Hayes_Roth_1985,
+	author = {Frederick Hayes-Roth},
+	date-added = {2022-11-01 8:44:27 a.m. -0700},
+	date-modified = {2022-11-01 8:44:27 a.m. -0700},
+	doi = {10.1145/4284.4286},
+	journal = {Communications of the {ACM}},
+	month = {sep},
+	number = {9},
+	pages = {921--932},
+	publisher = {Association for Computing Machinery ({ACM})},
+	title = {Rule-based systems},
+	url = {https://doi.org/10.1145%2F4284.4286},
+	volume = {28},
+	year = 1985,
+	bdsk-url-1 = {https://doi.org/10.1145%2F4284.4286},
+	bdsk-url-2 = {https://doi.org/10.1145/4284.4286}}
+
+@incollection{Magdalena_2015,
+	author = {Luis Magdalena},
+	booktitle = {Springer Handbook of Computational Intelligence},
+	date-added = {2022-11-01 8:39:41 a.m. -0700},
+	date-modified = {2022-11-01 8:39:41 a.m. -0700},
+	doi = {10.1007/978-3-662-43505-2_13},
+	pages = {203--218},
+	publisher = {Springer Berlin Heidelberg},
+	title = {Fuzzy Rule-Based Systems},
+	url = {https://doi.org/10.1007%2F978-3-662-43505-2_13},
+	year = 2015,
+	bdsk-url-1 = {https://doi.org/10.1007%2F978-3-662-43505-2_13},
+	bdsk-url-2 = {https://doi.org/10.1007/978-3-662-43505-2_13}}
+
+@article{ma2019multi,
+	author = {Ma, Haiping and Shen, Shigen and Yu, Mei and Yang, Zhile and Fei, Minrui and Zhou, Huiyu},
+	date-added = {2022-10-26 8:15:43 a.m. -0700},
+	date-modified = {2022-10-26 8:15:43 a.m. -0700},
+	journal = {Swarm and evolutionary computation},
+	pages = {365--387},
+	publisher = {Elsevier},
+	title = {Multi-population techniques in nature inspired optimization algorithms: A comprehensive survey},
+	volume = {44},
+	year = {2019}}
+
+@inproceedings{el2005factors,
+	author = {El-Abd, Mohammed and Kamel, Mohamed},
+	booktitle = {Proceedings of the 7th annual conference on Genetic and evolutionary computation},
+	date-added = {2022-10-26 8:14:59 a.m. -0700},
+	date-modified = {2022-10-26 8:14:59 a.m. -0700},
+	pages = {269--270},
+	title = {Factors governing the behavior of multiple cooperating swarms},
+	year = {2005}}
+
+@article{faris2016evolopy,
+	author = {Faris, Hossam and Aljarah, Ibrahim and Mirjalili, Seyedali and Castillo, Pedro A and Guerv{\'o}s, Juan Juli{\'a}n Merelo},
+	date-added = {2022-10-26 8:14:02 a.m. -0700},
+	date-modified = {2022-10-26 8:14:02 a.m. -0700},
+	journal = {IJCCI (ECTA)},
+	pages = {171--177},
+	title = {EvoloPy: An Open-source Nature-inspired Optimization Framework in Python.},
+	volume = {1},
+	year = {2016}}
+
+@article{cuevas2022generalized,
+	author = {Cuevas, Felizardo and Castillo, Oscar and Cort{\'e}s-Antonio, Prometeo},
+	date-added = {2022-10-25 8:32:46 a.m. -0700},
+	date-modified = {2022-10-25 8:32:46 a.m. -0700},
+	journal = {Symmetry},
+	number = {5},
+	pages = {859},
+	publisher = {MDPI},
+	title = {Generalized Type-2 Fuzzy Parameter Adaptation in the Marine Predator Algorithm for Fuzzy Controller Parameterization in Mobile Robots},
+	volume = {14},
+	year = {2022}}
+
+@inproceedings{zhao2008dynamic,
+	author = {Zhao, Shi-Zheng and Liang, Jing J and Suganthan, Ponnuthurai N and Tasgetiren, Mehmet Fatih},
+	booktitle = {2008 IEEE congress on evolutionary computation (IEEE world congress on computational intelligence)},
+	date-added = {2022-10-25 8:09:10 a.m. -0700},
+	date-modified = {2022-10-25 8:09:10 a.m. -0700},
+	organization = {IEEE},
+	pages = {3845--3852},
+	title = {Dynamic multi-swarm particle swarm optimizer with local search for large scale global optimization},
+	year = {2008}}
+
+@article{wu2016differential,
+	author = {Wu, Guohua and Mallipeddi, Rammohan and Suganthan, Ponnuthurai Nagaratnam and Wang, Rui and Chen, Huangke},
+	date-added = {2022-10-25 8:08:18 a.m. -0700},
+	date-modified = {2022-10-25 8:08:18 a.m. -0700},
+	journal = {Information Sciences},
+	pages = {329--345},
+	publisher = {Elsevier},
+	title = {Differential evolution with multi-population based ensemble of mutation strategies},
+	volume = {329},
+	year = {2016}}
+
+@article{li2010multi,
+	author = {Li, Yongming and Zeng, Xiaoping},
+	date-added = {2022-10-25 8:05:46 a.m. -0700},
+	date-modified = {2022-10-25 8:05:46 a.m. -0700},
+	journal = {Applied intelligence},
+	number = {3},
+	pages = {292--310},
+	publisher = {Springer},
+	title = {Multi-population co-genetic algorithm with double chain-like agents structure for parallel global numerical optimization},
+	volume = {32},
+	year = {2010}}
+
+@inproceedings{chen2009locust,
+	author = {Chen, Stephen},
+	booktitle = {2009 IEEE congress on evolutionary computation},
+	date-added = {2022-10-25 8:04:38 a.m. -0700},
+	date-modified = {2022-10-25 8:04:38 a.m. -0700},
+	organization = {IEEE},
+	pages = {1745--1752},
+	title = {Locust Swarms-A new multi-optima search technique},
+	year = {2009}}
+
+@book{laumond1998robot,
+	author = {Laumond, Jean-Paul and others},
+	date-added = {2022-10-25 8:03:33 a.m. -0700},
+	date-modified = {2022-10-25 8:03:33 a.m. -0700},
+	publisher = {Springer},
+	title = {Robot motion planning and control},
+	volume = {229},
+	year = {1998}}
+
+@inproceedings{chen2011selection,
+	author = {Chen, Stephen and Montgomery, James},
+	booktitle = {Proceedings of the 13th annual conference on Genetic and evolutionary computation},
+	date-added = {2022-10-25 8:01:19 a.m. -0700},
+	date-modified = {2022-10-25 8:01:19 a.m. -0700},
+	pages = {53--60},
+	title = {Selection strategies for initial positions and initial velocities in multi-optima particle swarms},
+	year = {2011}}
+
+@article{sole2016synthetic,
+	author = {Sol{\'e}, Ricard and Amor, Daniel R and Duran-Nebreda, Salva and Conde-Pueyo, N{\'u}ria and Carbonell-Ballestero, Max and Monta{\~n}ez, Raul},
+	date-added = {2022-10-25 7:59:17 a.m. -0700},
+	date-modified = {2022-10-25 7:59:17 a.m. -0700},
+	journal = {Biosystems},
+	pages = {47--61},
+	publisher = {Elsevier},
+	title = {Synthetic collective intelligence},
+	volume = {148},
+	year = {2016}}
+
+@incollection{beni1993swarm,
+	author = {Beni, Gerardo and Wang, Jing},
+	booktitle = {Robots and biological systems: towards a new bionics?},
+	date-added = {2022-10-25 7:58:01 a.m. -0700},
+	date-modified = {2022-10-25 7:58:01 a.m. -0700},
+	pages = {703--712},
+	publisher = {Springer},
+	title = {Swarm intelligence in cellular robotic systems},
+	year = {1993}}
+
+@inproceedings{nowostawski1999parallel,
+	author = {Nowostawski, Mariusz and Poli, Riccardo},
+	booktitle = {1999 Third International Conference on Knowledge-Based Intelligent Information Engineering Systems. Proceedings (Cat. No. 99TH8410)},
+	date-added = {2022-10-25 7:56:25 a.m. -0700},
+	date-modified = {2022-10-25 7:56:25 a.m. -0700},
+	organization = {Ieee},
+	pages = {88--92},
+	title = {Parallel genetic algorithm taxonomy},
+	year = {1999}}
+
+@inproceedings{kennedy1995particle,
+	author = {Kennedy, James and Eberhart, Russell},
+	booktitle = {Proceedings of ICNN'95-international conference on neural networks},
+	date-added = {2022-10-25 7:55:20 a.m. -0700},
+	date-modified = {2022-10-25 7:55:20 a.m. -0700},
+	organization = {IEEE},
+	pages = {1942--1948},
+	title = {Particle swarm optimization},
+	volume = {4},
+	year = {1995}}
+
+@article{chen2007applying,
+	author = {Chen, L and Chang, FJ},
+	date-added = {2022-10-25 7:34:56 a.m. -0700},
+	date-modified = {2022-10-25 7:34:56 a.m. -0700},
+	journal = {Hydrological Processes: An International Journal},
+	number = {5},
+	pages = {688--698},
+	publisher = {Wiley Online Library},
+	title = {Applying a real-coded multi-population genetic algorithm to multi-reservoir operation},
+	volume = {21},
+	year = {2007}}
+
+@article{Cantu-Paz1998A-survey-of-par,
+	author = {Cant{\'u}-Paz, Erick and others},
+	date-added = {2022-10-25 7:30:50 a.m. -0700},
+	date-modified = {2022-10-25 7:44:24 a.m. -0700},
+	journal = {Calculateurs paralleles, reseaux et systems repartis},
+	number = {2},
+	pages = {141--171},
+	publisher = {Citeseer},
+	title = {A survey of parallel genetic algorithms},
+	volume = {10},
+	year = {1998}}
+
+@article{mancilla2022,
+	abstract = {In this work, we propose, through the use of population-based metaheuristics, an optimization method that solves the problem of autonomous path tracking using a rear-wheel fuzzy logic controller. This approach enables the design of controllers using rules that are linguistically familiar to human users. Moreover, a new technique that uses three different paths to validate the performance of each candidate configuration is presented. We extend on our previous work by adding two more membership functions to the previous fuzzy model, intending to have a finer-grained adjustment. We tuned the controller using several well-known metaheuristic methods, Genetic Algorithms (GA), Particle Swarm Optimization (PSO), Grey Wolf Optimizer (GWO), Harmony Search (HS), and the recent Aquila Optimizer (AO) and Arithmetic Optimization Algorithms. Experiments validate that, compared to published results, the proposed fuzzy controllers have better RMSE-measured performance. Nevertheless, experiments also highlight problems with the common practice of evaluating the performance of fuzzy controllers with a single problem case and performance metric, resulting in controllers that tend to be overtrained.},
+	article-number = {202},
+	author = {Mancilla, Alejandra and Garc{\'\i}a-Valdez, Mario and Castillo, Oscar and Merelo-Guerv{\'o}s, Juan Julian},
+	date-added = {2022-10-25 7:30:50 a.m. -0700},
+	date-modified = {2022-10-25 7:30:50 a.m. -0700},
+	doi = {10.3390/sym14020202},
+	issn = {2073-8994},
+	journal = {Symmetry},
+	number = {2},
+	title = {Optimal Fuzzy Controller Design for Autonomous Robot Path Tracking Using Population-Based Metaheuristics},
+	url = {https://www.mdpi.com/2073-8994/14/2/202},
+	volume = {14},
+	year = {2022},
+	bdsk-url-1 = {https://www.mdpi.com/2073-8994/14/2/202},
+	bdsk-url-2 = {https://doi.org/10.3390/sym14020202}}
+
+@incollection{Cheng2020Parallel-geneti,
+	author = {Cheng, John Runwei and Gen, Mitsuo},
+	booktitle = {Industry 4.0-Impact on Intelligent Logistics and Manufacturing},
+	date-added = {2022-10-25 7:30:50 a.m. -0700},
+	date-modified = {2022-10-25 7:53:19 a.m. -0700},
+	publisher = {IntechOpen},
+	title = {Parallel genetic algorithms with {GPU} computing},
+	year = {2020}}
+
+@article{Xu2019A-reinforcement,
+	author = {Xu, Yue and Pi, Dechang},
+	date-added = {2022-10-25 7:30:50 a.m. -0700},
+	date-modified = {2022-10-25 7:44:05 a.m. -0700},
+	journal = {Neural Computing and Applications},
+	pages = {1--26},
+	publisher = {Springer},
+	title = {A reinforcement learning-based communication topology in particle swarm optimization},
+	year = {2019}}
+
+@article{Changhe2005Multi-populatio,
+	author = {Changhe, L. and Trung, N. and Ming, Y. and Shengxiang, Y. and Sanyou, Z.},
+	date = {2015},
+	date-added = {2022-10-25 7:30:50 a.m. -0700},
+	date-modified = {2022-10-25 8:06:45 a.m. -0700},
+	journal = {Information Sciences," Information Sciences},
+	pages = {95--118},
+	title = {Multi-population methods in unconstrained continuous dynamic environments: The challenges},
+	volume = {296},
+	year = {2005}}
+
+@article{Mohammed2008A-Taxonomy-of-C,
+	author = {Mohammed, E.-A. and S, K.Mohamed},
+	date = {2008},
+	date-added = {2022-10-25 7:30:50 a.m. -0700},
+	date-modified = {2022-10-25 7:44:32 a.m. -0700},
+	journal = {International Journal of Computational Intelligence Research},
+	pages = {137--144},
+	title = {A Taxonomy of Cooperative Particle Swarm Optimizers},
+	volume = {4},
+	year = {2008}}
+
+@inproceedings{Garcia-Valdez2018A-modern-event-,
+	author = {Garc{\'\i}a-Valdez, Jos{\'e}-Mario and Merelo-Guerv{\'o}s, Juan-Juli{\'a}n},
+	booktitle = {Proceedings of the Genetic and Evolutionary Computation Conference Companion},
+	date-added = {2022-10-25 7:30:50 a.m. -0700},
+	date-modified = {2022-10-25 7:43:29 a.m. -0700},
+	pages = {233--234},
+	title = {A modern, event-based architecture for distributed evolutionary algorithms},
+	year = {2018}}
+
+@article{Blackwell2018Impact-of-Commu,
+	author = {Blackwell, Tim and Kennedy, Jim},
+	date-added = {2022-10-25 7:30:50 a.m. -0700},
+	date-modified = {2022-10-25 7:50:14 a.m. -0700},
+	doi = {10.1109/TEVC.2018.2880894},
+	journal = {IEEE Transactions on Evolutionary Computation},
+	month = {11},
+	pages = {1-1},
+	title = {Impact of Communication Topology in Particle Swarm Optimization},
+	volume = {PP},
+	year = {2018},
+	bdsk-url-1 = {https://doi.org/10.1109/TEVC.2018.2880894}}
+
+@article{Zhang2015A-Comprehensive,
+	author = {Zhang, Yu-Dong and Wang, Shuihua and ji, Genlin},
+	date-added = {2022-10-25 7:30:50 a.m. -0700},
+	date-modified = {2022-10-25 7:42:16 a.m. -0700},
+	doi = {10.1155/2015/931256},
+	journal = {Mathematical Problems in Engineering},
+	month = {01},
+	pages = {1-38},
+	title = {A Comprehensive Survey on Particle Swarm Optimization Algorithm and Its Applications},
+	volume = {2015},
+	year = {2015},
+	bdsk-url-1 = {https://doi.org/10.1155/2015/931256}}
+
+@inproceedings{Biswas2013Migrating,
+	author = {Biswas, Subhodip and Kundu, Souvik and Bose, Digbalay and Das, Swagatam and Suganthan, Ponnuthurai and Panigrahi, Bijaya},
+	date-added = {2022-10-25 7:30:50 a.m. -0700},
+	date-modified = {2022-10-25 7:51:14 a.m. -0700},
+	doi = {10.1109/SIS.2013.6615186},
+	month = {04},
+	pages = {248-255},
+	title = {Migrating forager population in a multi-population Artificial Bee Colony algorithm with modified perturbation schemes},
+	year = {2013},
+	bdsk-url-1 = {https://doi.org/10.1109/SIS.2013.6615186}}
+
+@techreport{Hansen2010Real-Parameter,
+	author = {Hansen, Nikolaus and Auger, Anne and Finck, Steffen and Ros, Raymond},
+	date-added = {2022-10-25 7:30:50 a.m. -0700},
+	date-modified = {2022-10-25 8:02:18 a.m. -0700},
+	hal_id = {inria-00462481},
+	hal_version = {v1},
+	institution = {{INRIA}},
+	month = Mar,
+	number = {RR-7215},
+	pdf = {https://hal.inria.fr/inria-00462481/file/RR-7215.pdf},
+	title = {{Real-Parameter Black-Box Optimization Benchmarking 2010: Experimental Setup}},
+	type = {Research Report},
+	url = {https://hal.inria.fr/inria-00462481},
+	year = {2010},
+	bdsk-url-1 = {https://hal.inria.fr/inria-00462481}}
+
+@article{xia2019command,
+	author = {Xia, Jianwei and Zhang, Jing and Feng, June and Wang, Zhen and Zhuang, Guangming},
+	date-added = {2022-10-25 7:29:59 a.m. -0700},
+	date-modified = {2022-10-25 7:29:59 a.m. -0700},
+	journal = {IEEE Transations on Systems, Man, and Cybernetics: Systems},
+	publisher = {IEEE},
+	title = {Command filter-based adaptive fuzzy control for nonlinear systems with unknown control directions},
+	year = {2019}}
+
+@inproceedings{wagner2007genetic,
+	author = {Wagner, Christian and Hagras, Hani},
+	booktitle = {2007 IEEE International Fuzzy Systems Conference},
+	date-added = {2022-10-25 7:29:59 a.m. -0700},
+	date-modified = {2022-10-25 7:29:59 a.m. -0700},
+	organization = {IEEE},
+	pages = {1--6},
+	title = {A genetic algorithm based architecture for evolving type-2 fuzzy logic controllers for real world autonomous mobile robots},
+	year = {2007}}
+
+@article{Perez2007Particle-swarm,
+	author = {Perez, RE l and Behdinan, K},
+	date-added = {2022-10-25 7:29:59 a.m. -0700},
+	date-modified = {2022-10-25 7:53:32 a.m. -0700},
+	journal = {Computers \& Structures},
+	number = {19-20},
+	pages = {1579--1588},
+	publisher = {Elsevier},
+	title = {Particle swarm approach for structural design optimization},
+	volume = {85},
+	year = {2007}}
+
+@article{durgun2012structural,
+	author = {Durgun, {\.I}smail and Yildiz, Ali R},
+	date-added = {2022-10-25 7:29:59 a.m. -0700},
+	date-modified = {2022-10-25 7:29:59 a.m. -0700},
+	journal = {Materials Testing},
+	number = {3},
+	pages = {185--188},
+	publisher = {De Gruyter},
+	title = {Structural design optimization of vehicle components using cuckoo search algorithm},
+	volume = {54},
+	year = {2012}}
+
+@inproceedings{Geem2005Harmony-search,
+	author = {Geem, Zong Woo and Lee, Kang Seok and Tseng, Chung-Li},
+	booktitle = {Proceedings of the 7th annual conference on Genetic and evolutionary computation},
+	date-added = {2022-10-25 7:29:59 a.m. -0700},
+	date-modified = {2022-10-25 7:50:08 a.m. -0700},
+	pages = {651--652},
+	title = {Harmony search for structural design},
+	year = {2005}}
+
+@article{yildiz2012new,
+	author = {Yildiz, Ali R},
+	date-added = {2022-10-25 7:29:59 a.m. -0700},
+	date-modified = {2022-10-25 7:29:59 a.m. -0700},
+	journal = {Proceedings of the Institution of Mechanical Engineers, Part D: Journal of Automobile Engineering},
+	number = {10},
+	pages = {1340--1351},
+	publisher = {Sage Publications Sage UK: London, England},
+	title = {A new hybrid particle swarm optimization approach for structural design optimization in the automotive industry},
+	volume = {226},
+	year = {2012}}
+
+@incollection{koza2005genetic,
+  title={Genetic programming},
+  author={Koza, John R and Poli, Riccardo},
+  booktitle={Search methodologies},
+  pages={127--164},
+  year={2005},
+  publisher={Springer}
+}
+
+@article{araujo2008multikulti,
+  title={Multikulti algorithm: Migrating the most different genotypes in an island model},
+  author={Araujo, Lourdes and Merelo Guerv{\'o}s, Juan J and Cotta, Carlos and de Vega, Francisco Fern{\'a}ndez},
+  journal={arXiv preprint arXiv:0806.2843},
+  year={2008}
+}
+
+
+@inproceedings{starkweather1990optimization,
+  title={Optimization using distributed genetic algorithms},
+  author={Starkweather, Timothy and Whitley, Darrell and Mathias, Keith},
+  booktitle={International Conference on Parallel Problem Solving from Nature},
+  pages={176--185},
+  year={1990},
+  organization={Springer}
+}
+
+@inproceedings{konfrst2004parallelGA,
+  author={Konfrst, Z.},
+  booktitle={18th International Parallel and Distributed Processing Symposium, 2004. Proceedings.}, 
+  title={Parallel genetic algorithms: advances, computing trends, applications and perspectives}, 
+  year={2004},
+  volume={},
+  number={},
+  pages={162-},
+  doi={10.1109/IPDPS.2004.1303155}}
+
+@book{back1996evolutionary,
+	author = {B\"ack, Thomas},
+	date-added = {2022-10-25 7:29:59 a.m. -0700},
+	date-modified = {2022-10-25 7:47:24 a.m. -0700},
+	publisher = {Oxford university press},
+	title = {Evolutionary algorithms in theory and practice: evolution strategies, evolutionary programming, genetic algorithms},
+	year = {1996}}
+
+@book{clerc2010particle,
+	author = {Clerc, Maurice},
+	date-added = {2022-10-25 7:29:59 a.m. -0700},
+	date-modified = {2022-10-25 7:29:59 a.m. -0700},
+	publisher = {John Wiley \& Sons},
+	title = {Particle swarm optimization},
+	volume = {93},
+	year = {2010}}
+
+@incollection{kennedy2006swarm,
+	author = {Kennedy, James},
+	booktitle = {Handbook of nature-inspired and innovative computing},
+	date-added = {2022-10-25 7:29:59 a.m. -0700},
+	date-modified = {2022-10-25 7:29:59 a.m. -0700},
+	pages = {187--219},
+	publisher = {Springer},
+	title = {Swarm intelligence},
+	year = {2006}}
+
+@book{Holland1992Adaptation,
+	author = {Holland, John Henry and others},
+	date-added = {2022-10-25 7:29:59 a.m. -0700},
+	date-modified = {2022-10-25 7:44:48 a.m. -0700},
+	publisher = {MIT press},
+	title = {Adaptation in natural and artificial systems: an introductory analysis with applications to biology, control, and artificial intelligence},
+	year = {1992}}
+
+@article{mirjalili2014grey,
+	author = {Mirjalili, Seyedali and Mirjalili, Seyed Mohammad and Lewis, Andrew},
+	date-added = {2022-10-25 7:29:59 a.m. -0700},
+	date-modified = {2022-10-25 7:49:48 a.m. -0700},
+	journal = {Advances in engineering software},
+	pages = {46--61},
+	publisher = {Elsevier},
+	title = {Grey wolf optimizer},
+	volume = {69},
+	year = {2014}}
+
+@article{karabouga2004simple,
+	author = {Karabo{\u{g}}a, Dervi{\c{s}} and {\"O}kdem, Sel{\c{c}}uk},
+	date-added = {2022-10-25 7:29:59 a.m. -0700},
+	date-modified = {2022-10-25 7:29:59 a.m. -0700},
+	journal = {Turkish Journal of Electrical Engineering \& Computer Sciences},
+	number = {1},
+	pages = {53--60},
+	publisher = {The Scientific and Technological Research Council of Turkey},
+	title = {A simple and global optimization algorithm for engineering problems: differential evolution algorithm},
+	volume = {12},
+	year = {2004}}
+
+@article{abualigah2021arithmetic,
+	author = {Abualigah, Laith and Diabat, Ali and Mirjalili, Seyedali and Abd Elaziz, Mohamed and Gandomi, Amir H},
+	date-added = {2022-10-25 7:29:59 a.m. -0700},
+	date-modified = {2022-10-25 7:29:59 a.m. -0700},
+	journal = {Computer methods in applied mechanics and engineering},
+	pages = {113609},
+	publisher = {Elsevier},
+	title = {The arithmetic optimization algorithm},
+	volume = {376},
+	year = {2021}}
+
+@article{abualigah2021aquila,
+	author = {Abualigah, Laith and Yousri, Dalia and Abd Elaziz, Mohamed and Ewees, Ahmed A and Al-qaness, Mohammed AA and Gandomi, Amir H},
+	date-added = {2022-10-25 7:29:59 a.m. -0700},
+	date-modified = {2022-10-25 7:29:59 a.m. -0700},
+	journal = {Computers \& Industrial Engineering},
+	pages = {107250},
+	publisher = {Elsevier},
+	title = {Aquila Optimizer: A novel meta-heuristic optimization Algorithm},
+	volume = {157},
+	year = {2021}}
+
+@article{geem2001new,
+	author = {Geem, Zong Woo and Kim, Joong Hoon and Loganathan, Gobichettipalayam Vasudevan},
+	date-added = {2022-10-25 7:29:59 a.m. -0700},
+	date-modified = {2022-10-25 7:29:59 a.m. -0700},
+	journal = {simulation},
+	number = {2},
+	pages = {60--68},
+	publisher = {Sage Publications Sage CA: Thousand Oaks, CA},
+	title = {A new heuristic optimization algorithm: harmony search},
+	volume = {76},
+	year = {2001}}
+
+@incollection{Eiben2003Genetic-algorit,
+	author = {Eiben, Agoston E and Smith, James E},
+	booktitle = {Introduction to evolutionary computing},
+	date-added = {2022-10-25 7:29:59 a.m. -0700},
+	date-modified = {2022-10-25 7:49:12 a.m. -0700},
+	pages = {37--69},
+	publisher = {Springer},
+	title = {Genetic algorithms},
+	year = {2003}}
+
+@article{Wu2006Genetic-learnin,
+	author = {Wu, Dongrui and Tan, Woei Wan},
+	date-added = {2022-10-25 7:29:59 a.m. -0700},
+	date-modified = {2022-10-25 7:49:39 a.m. -0700},
+	journal = {Engineering Applications of Artificial Intelligence},
+	number = {8},
+	pages = {829--841},
+	publisher = {Elsevier},
+	title = {Genetic learning and performance evaluation of interval type-2 fuzzy logic controllers},
+	volume = {19},
+	year = {2006}}
+
+@article{Holland1992Genetic,
+	author = {Holland, John H},
+	date-added = {2022-10-25 7:29:59 a.m. -0700},
+	date-modified = {2022-10-25 7:49:23 a.m. -0700},
+	journal = {Scientific american},
+	number = {1},
+	pages = {66--73},
+	publisher = {JSTOR},
+	title = {Genetic algorithms},
+	volume = {267},
+	year = {1992}}
+
+@inproceedings{garcia2017evospace,
+  title={evospace-js: Asynchronous pool-based execution of heterogeneous metaheuristics},
+  author={Garc{\'\i}a-Valdez, Mario and Merelo, JJ},
+  booktitle={Proceedings of the Genetic and Evolutionary Computation Conference Companion},
+  pages={1202--1208},
+  year={2017}
+}
+@book{engelbrecht2007computational,
+	author = {Engelbrecht, Andries P},
+	date-added = {2022-10-25 7:29:59 a.m. -0700},
+	date-modified = {2022-10-25 7:29:59 a.m. -0700},
+	publisher = {John Wiley \& Sons},
+	title = {Computational intelligence: an introduction},
+	year = {2007}}
+
+@incollection{astudillo2013optimization,
+	author = {Astudillo, Leslie and Melin, Patricia and Castillo, Oscar},
+	booktitle = {Recent advances on hybrid intelligent systems},
+	date-added = {2022-10-25 7:29:59 a.m. -0700},
+	date-modified = {2022-10-25 7:29:59 a.m. -0700},
+	pages = {3--20},
+	publisher = {Springer},
+	title = {Optimization of a fuzzy tracking controller for an autonomous mobile robot under perturbed torques by means of a chemical optimization paradigm},
+	year = {2013}}
+
+@inproceedings{sanchez1997adaptive,
+	author = {Sanchez, O and Ollero, A and Heredia, G},
+	booktitle = {Proceedings of 6th International Fuzzy Systems Conference},
+	date-added = {2022-10-25 7:29:59 a.m. -0700},
+	date-modified = {2022-10-25 7:29:59 a.m. -0700},
+	organization = {IEEE},
+	pages = {593--599},
+	title = {Adaptive fuzzy control for automatic path tracking of outdoor mobile robots. Application to Romeo 3r},
+	volume = {1},
+	year = {1997}}
+
+@article{wan1970applying,
+	author = {Wan, H},
+	date-added = {2022-10-25 7:29:59 a.m. -0700},
+	date-modified = {2022-10-25 7:29:59 a.m. -0700},
+	journal = {WIT Transactions on Information and Communication Technologies},
+	publisher = {WIT Press},
+	title = {Applying the genetic algorithm to optimization problems},
+	volume = {2},
+	year = {1970}}
+
+@inbook{mancilla2021optimization,
+	abstract = {Optimization problems are present in many fields of science, engineering, and industry. In most cases, optimization problems involve a large number of complex decision variables. Often, the application of fuzzy systems to traditional control strategies requires the use of optimization techniques to define the parameters of the membership functions capturing the designer's experience. Currently, bioinspired algorithms are one of the most widely used methods for fuzzy system optimization. In this paper, we review the literature on the application of different bioinspired techniques such as Genetic Algorithms, Ant Colony Optimization, Particle Swarm Optimization, Galaxy Swarm Optimization, Harmony Search, Firefly, Differential Evolution, to optimize the parameters of the fuzzy controllers. We found particular trends in the current literature, with many methods using dynamic parameter adaptation, hybrids, distributed algorithms, and type-2 fuzzy logic.},
+	address = {Chm},
+	author = {Mancilla, Alejandra and Castillo, Oscar and Valdez, Mario Garc{\'\i}a},
+	booktitle = {Recent Advances of Hybrid Intelligent Systems Based on Soft Computing},
+	date-added = {2022-10-25 7:29:59 a.m. -0700},
+	date-modified = {2022-10-25 7:52:58 a.m. -0700},
+	doi = {10.1007/978-3-030-58728-4_1},
+	isbn = {978-3-030-58728-4},
+	pages = {1--11},
+	publisher = {Springer International Publishing},
+	title = {Optimization of Fuzzy Logic Controllers with Distributed Bio-Inspired Algorithms},
+	url = {https://doi.org/10.1007/978-3-030-58728-4_1},
+	year = {2021},
+	bdsk-url-1 = {https://doi.org/10.1007/978-3-030-58728-4_1}}
+
+@inproceedings{mancilla2022tracking,
+	abstract = {This paper presents three configurations for evolving the membership functions' parameters for a path-following fuzzy controller. Designers of fuzzy controllers have many options when selecting which parameters and how the optimization algorithm adjusts them. The experiments obtained excellent results with a relatively simple controller using three membership for each of the variables. We tested the proposed controller by a robot simulation that follows a path using a rear-wheel tracking technique. We optimized the controller's parameters using a genetic algorithm that consisted of a population of chromosomes containing the parameters of a controller. Each individual's fitness in the populations was determined by calculating the root-mean-square error resulting from each simulation. We have observed, changes in the selection of parameters that parameters to optimize, we tested four, eight, and 18, affect the results obtained and are essentialto minimize the total time of evaluations and a minimum possible error. We also tested two ranges for the random values used for initializing the population and verify that this selection also impacts the algorithms' performance.},
+	address = {Cham},
+	author = {Mancilla, Alejandra and Castillo, Oscar and Valdez, Mario Garcia},
+	booktitle = {Intelligent and Fuzzy Techniques for Emerging Conditions and Digital Transformation},
+	date-added = {2022-10-25 7:29:59 a.m. -0700},
+	date-modified = {2022-10-25 7:47:40 a.m. -0700},
+	editor = {Kahraman, Cengiz and Cebi, Selcuk and Cevik Onar, Sezi and Oztaysi, Basar and Tolga, A. Cagri and Sari, Irem Ucal},
+	isbn = {978-3-030-85626-7},
+	pages = {461--468},
+	publisher = {Springer International Publishing},
+	title = {Evolutionary Approach to the Optimal Design of Fuzzy Controllers for Trajectory Tracking},
+	year = {2022}}
+
+@article{back1993overview,
+	author = {B{\"a}ck, Thomas and Schwefel, Hans-Paul},
+	date-added = {2022-10-25 7:29:59 a.m. -0700},
+	date-modified = {2022-10-25 7:29:59 a.m. -0700},
+	journal = {Evolutionary computation},
+	number = {1},
+	pages = {1--23},
+	publisher = {mit Press},
+	title = {An overview of evolutionary algorithms for parameter optimization},
+	volume = {1},
+	year = {1993}}
+
+@inproceedings{isaka1988design,
+	author = {Isaka, S and Sebald, AV and Karimi, A and Smith, NT and Quinn, ML},
+	booktitle = {Proceedings of the 27th IEEE Conference on Decision and Control},
+	date-added = {2022-10-25 7:29:59 a.m. -0700},
+	date-modified = {2022-10-25 7:29:59 a.m. -0700},
+	organization = {IEEE},
+	pages = {1068--1069},
+	title = {On the design and performance evaluation of adaptive fuzzy controllers},
+	year = {1988}}
+
+@article{goguen_zadeh_1973,
+	author = {Goguen, JA},
+	date-added = {2022-10-25 7:29:59 a.m. -0700},
+	date-modified = {2022-10-25 7:29:59 a.m. -0700},
+	journal = {The Journal of Symbolic Logic},
+	note = {Publisher: Cambridge University Press},
+	number = {4},
+	pages = {656--657},
+	title = {{LA} {Zadeh}. {Fuzzy} sets. {Information} and control, vol. 8 (1965), pp. 338--353.-{LA} {Zadeh}. {Similarity} relations and fuzzy orderings. {Information} sciences, vol. 3 (1971), pp. 177--200.},
+	volume = {38},
+	year = {1973}}
+
+@book{Passino1998Fuzzy-control,
+	author = {Passino, Kevin M and Yurkovich, Stephen and Reinfrank, Michael},
+	date-added = {2022-10-25 7:29:59 a.m. -0700},
+	date-modified = {2022-10-25 7:48:22 a.m. -0700},
+	publisher = {Citeseer},
+	title = {Fuzzy control},
+	volume = {42},
+	year = {1998}}
+
+@article{king1977application,
+	author = {King, Peter J and Mamdani, Ehmat H},
+	date-added = {2022-10-25 7:29:59 a.m. -0700},
+	date-modified = {2022-10-25 7:29:59 a.m. -0700},
+	journal = {Automatica},
+	number = {3},
+	pages = {235--242},
+	publisher = {Elsevier},
+	title = {The application of fuzzy control systems to industrial processes},
+	volume = {13},
+	year = {1977}}
+
+@article{mamdani1974application,
+	author = {Mamdani, Ebrahim H},
+	journal = {Proceedings of the institution of electrical engineers},
+	date-added = {2022-10-25 7:29:59 a.m. -0700},
+	date-modified = {2022-10-25 7:29:59 a.m. -0700},
+	number = {12},
+	organization = {IET},
+	pages = {1585--1588},
+	title = {Application of fuzzy algorithms for control of simple dynamic plant},
+	volume = {121},
+	year = {1974}}
+
+@incollection{Zadeh1996Fuzzy-sets,
+	author = {Zadeh, Lotfi A},
+	booktitle = {Fuzzy sets, fuzzy logic, and fuzzy systems: selected papers by Lotfi A Zadeh},
+	date-added = {2022-10-25 7:29:59 a.m. -0700},
+	date-modified = {2022-10-25 7:49:03 a.m. -0700},
+	pages = {394--432},
+	publisher = {World Scientific},
+	title = {Fuzzy sets},
+	year = {1996}}
+
+@article{castillo_new_2015,
+	author = {Castillo, Oscar and Neyoy, H{\'e}ctor and Soria, Jos{\'e} and Melin, Patricia and Valdez, Fevrier},
+	date-added = {2022-10-25 7:29:59 a.m. -0700},
+	date-modified = {2022-10-25 7:29:59 a.m. -0700},
+	journal = {Applied soft computing},
+	note = {Publisher: Elsevier},
+	pages = {150--159},
+	title = {A new approach for dynamic fuzzy logic parameter tuning in ant colony optimization and its application in fuzzy control of a mobile robot},
+	volume = {28},
+	year = {2015}}
+
+@article{garcia_path_2009,
+	author = {Garcia, MA Porta and Montiel, Oscar and Castillo, Oscar and Sepulveda, Roberto and Melin, Patricia},
+	date-added = {2022-10-25 7:29:59 a.m. -0700},
+	date-modified = {2022-10-25 7:29:59 a.m. -0700},
+	journal = {Applied Soft Computing},
+	note = {Publisher: Elsevier},
+	number = {3},
+	pages = {1102--1110},
+	title = {Path planning for autonomous mobile robot navigation with ant colony optimization and fuzzy cost function evaluation},
+	volume = {9},
+	year = {2009}}
+
+@inproceedings{hernandez_optimization_2019,
+	author = {Hernandez, Eufronio and Castillo, Oscar and Soria, Jose},
+	booktitle = {2019 {IEEE} international conference on fuzzy systems ({FUZZ}-{IEEE})},
+	date-added = {2022-10-25 7:29:59 a.m. -0700},
+	date-modified = {2022-10-25 7:29:59 a.m. -0700},
+	pages = {1--6},
+	publisher = {IEEE},
+	title = {Optimization of fuzzy controllers for autonomous mobile robots using the grey wolf optimizer},
+	year = {2019}}
+
+@inproceedings{Lagunes2017Methodology,
+	author = {Lagunes, Marylu L and Castillo, Oscar and Soria, Jose},
+	booktitle = {North {American} {Fuzzy} {Information} {Processing} {Society} {Annual} {Conference}},
+	date-added = {2022-10-25 7:29:59 a.m. -0700},
+	date-modified = {2022-10-25 7:50:57 a.m. -0700},
+	pages = {131--137},
+	publisher = {Springer},
+	title = {Methodology for the optimization of a fuzzy controller using a bio-inspired algorithm},
+	year = {2017}}
+
+@incollection{lagunes_optimization_2018,
+	author = {Lagunes, Marylu L and Castillo, Oscar and Soria, Jose},
+	booktitle = {Fuzzy {Logic} {Augmentation} of {Neural} and {Optimization} {Algorithms}: {Theoretical} {Aspects} and {Real} {Applications}},
+	date-added = {2022-10-25 7:29:59 a.m. -0700},
+	date-modified = {2022-10-25 7:29:59 a.m. -0700},
+	pages = {199--206},
+	publisher = {Springer},
+	title = {Optimization of membership function parameters for fuzzy controllers of an autonomous mobile robot using the firefly algorithm},
+	year = {2018}}
+
+@inproceedings{martinez-soto_bio-inspired_2012,
+	author = {Martinez-Soto, Ricardo and Castillo, Oscar and Aguilar, Luis T and Baruch, Ieroham S},
+	booktitle = {2012 {Annual} {Meeting} of the {North} {American} {Fuzzy} {Information} {Processing} {Society} ({NAFIPS})},
+	date-added = {2022-10-25 7:29:59 a.m. -0700},
+	date-modified = {2022-10-25 7:29:59 a.m. -0700},
+	pages = {1--6},
+	publisher = {IEEE},
+	title = {Bio-inspired optimization of fuzzy logic controllers for autonomous mobile robots},
+	year = {2012}}
+
+@article{paden_survey_2016,
+	author = {Paden, Brian and {\v C}{\'a}p, Michal and Yong, Sze Zheng and Yershov, Dmitry and Frazzoli, Emilio},
+	date-added = {2022-10-25 7:29:59 a.m. -0700},
+	date-modified = {2022-10-25 7:29:59 a.m. -0700},
+	journal = {IEEE Transactions on intelligent vehicles},
+	note = {Publisher: IEEE},
+	number = {1},
+	pages = {33--55},
+	title = {A survey of motion planning and control techniques for self-driving urban vehicles},
+	volume = {1},
+	year = {2016}}
+
+@article{zhang2013cubic,
+	author = {Zhang, Ke and Guo, Jian-Xin and Gao, Xiao-Shan},
+	date-added = {2022-10-25 7:29:59 a.m. -0700},
+	date-modified = {2022-10-25 7:29:59 a.m. -0700},
+	journal = {International Journal of Precision Engineering and Manufacturing},
+	number = {7},
+	pages = {1141--1146},
+	publisher = {Springer},
+	title = {Cubic spline trajectory generation with axis jerk and tracking error constraints},
+	volume = {14},
+	year = {2013}}
+
+@article{pamucar_vehicle_2018,
+	author = {Pamucar, Dragan and {\'C}irovi{\'c}, Goran},
+	date-added = {2022-10-25 7:29:59 a.m. -0700},
+	date-modified = {2022-10-25 7:29:59 a.m. -0700},
+	journal = {Decision Making: Applications in Management and Engineering},
+	number = {1},
+	pages = {13--37},
+	title = {Vehicle route selection with an adaptive neuro fuzzy inference system in uncertainty conditions},
+	volume = {1},
+	year = {2018}}
+
+@book{tan2016introduction,
+	author = {Tan, Pang-Ning and Steinbach, Michael and Kumar, Vipin},
+	date-added = {2022-10-25 7:29:59 a.m. -0700},
+	date-modified = {2022-10-25 7:29:59 a.m. -0700},
+	publisher = {Pearson Education India},
+	title = {Introduction to data mining},
+	year = {2016}}
+
+@article{guerrero-castellanos_trajectory_2014,
+	author = {Guerrero-Castellanos, JF and Villarreal-Cervantes, MG and S{\'a}nchez-Santana, JP and Ram{\'\i}rez-Mart{\'\i}nez, S},
+	date-added = {2022-10-25 7:29:59 a.m. -0700},
+	date-modified = {2022-10-25 7:29:59 a.m. -0700},
+	journal = {RIAI-Revista Iberoamericana de Automatica e Informatica Industrial},
+	note = {Publisher: Elsevier Doyma},
+	pages = {426--434},
+	title = {Trajectory tracking of a mobile robot (3, 0) by means of bounded control.},
+	year = {2014}}
+
+@inproceedings{samson1992path,
+	author = {Samson, Claude},
+	booktitle = {International Conference on Control, Automation, Robotics and Vision, 1992},
+	date-added = {2022-10-25 7:29:59 a.m. -0700},
+	date-modified = {2022-10-25 7:29:59 a.m. -0700},
+	title = {Path following and time-varying feedback stabilization of a wheeled mobile robot},
+	year = {1992}}
+
+@article{sakai_pythonrobotics_2018,
+	author = {Sakai, Atsushi and Ingram, Daniel and Dinius, Joseph and Chawla, Karan and Raffin, Antonin and Paques, Alexis},
+	date-added = {2022-10-25 7:29:59 a.m. -0700},
+	date-modified = {2022-10-25 7:29:59 a.m. -0700},
+	journal = {CoRR},
+	note = {\_eprint: 1808.10703},
+	title = {{PythonRobotics}: a {Python} code collection of robotics algorithms},
+	url = {http://arxiv.org/abs/1808.10703},
+	volume = {abs/1808.10703},
+	year = {2018},
+	bdsk-url-1 = {http://arxiv.org/abs/1808.10703}}
+
+@incollection{De-Luca1998Feedback-contro,
+	author = {De Luca, Alessandro and Oriolo, Giuseppe and Samson, Claude},
+	booktitle = {Robot motion planning and control},
+	date-added = {2022-10-25 7:29:59 a.m. -0700},
+	date-modified = {2022-10-25 7:48:10 a.m. -0700},
+	pages = {171--253},
+	publisher = {Springer},
+	title = {Feedback control of a nonholonomic car-like robot},
+	year = {1998}}
+
+@article{fortin_deap_2012,
+	author = {Fortin, F{\'e}lix-Antoine and De Rainville, Fran{\c c}ois-Michel and Gardner, Marc-Andr{\'e} Gardner and Parizeau, Marc and Gagn{\'e}, Christian},
+	date-added = {2022-10-25 7:29:59 a.m. -0700},
+	date-modified = {2022-10-25 7:29:59 a.m. -0700},
+	journal = {The Journal of Machine Learning Research},
+	note = {Publisher: JMLR. org},
+	number = {1},
+	pages = {2171--2175},
+	title = {{DEAP}: {Evolutionary} algorithms made easy},
+	volume = {13},
+	year = {2012}}
+
+@article{antonelli_fuzzy-logic-based_2007,
+	author = {Antonelli, Gianluca and Chiaverini, Stefano and Fusco, Giuseppe},
+	date-added = {2022-10-25 7:29:59 a.m. -0700},
+	date-modified = {2022-10-25 7:29:59 a.m. -0700},
+	doi = {10.1109/TFUZZ.2006.879998},
+	issn = {1063-6706},
+	journal = {IEEE Transactions on Fuzzy Systems},
+	month = {April},
+	number = {2},
+	pages = {211--221},
+	title = {A {Fuzzy}-{Logic}-{Based} {Approach} for {Mobile} {Robot} {Path} {Tracking}},
+	url = {http://ieeexplore.ieee.org/document/4142745/},
+	urldate = {2021-12-10},
+	volume = {15},
+	year = {2007},
+	bdsk-url-1 = {http://ieeexplore.ieee.org/document/4142745/},
+	bdsk-url-2 = {https://doi.org/10.1109/TFUZZ.2006.879998}}
+
+@inproceedings{falcone_model_2007,
+	author = {Falcone, Paolo and Borrelli, Francesco and Asgari, Jahan and Tseng, H Eric and Hrovat, Davor},
+	booktitle = {2007 {Mediterranean} {Conference} on {Control} \& {Automation}},
+	date-added = {2022-10-25 7:29:59 a.m. -0700},
+	date-modified = {2022-10-25 7:29:59 a.m. -0700},
+	pages = {1--6},
+	publisher = {IEEE},
+	title = {A model predictive control approach for combined braking and steering in autonomous vehicles},
+	year = {2007}}
+
+@article{samson_time-varying_1993,
+	author = {Samson, Claude},
+	date-added = {2022-10-25 7:29:59 a.m. -0700},
+	date-modified = {2022-10-25 7:29:59 a.m. -0700},
+	journal = {The International journal of robotics research},
+	note = {Publisher: Sage Publications Sage CA: Thousand Oaks, CA},
+	number = {1},
+	pages = {55--64},
+	title = {Time-varying feedback stabilization of car-like wheeled mobile robots},
+	volume = {12},
+	year = {1993}}
+
+
+@inproceedings{van2010parallel,
+  title={Parallel hybrid evolutionary algorithms on {GPU}},
+  author={Van Luong, Th{\'e} and Melab, Nouredine and Talbi, El-Ghazali},
+  booktitle={IEEE Congress on Evolutionary Computation},
+  pages={1--8},
+  year={2010},
+  organization={IEEE}
+}
+
+@incollection{melab2006parallel,
+  title={On parallel evolutionary algorithms on the computational grid},
+  author={Melab, Nouredine and Talbi, El-Ghazali and Cahon, S{\'e}bastien},
+  booktitle={Parallel evolutionary computations},
+  pages={117--132},
+  year={2006},
+  publisher={Springer}
+}
+
+@inproceedings{singh2014comprehensive,
+  title={A comprehensive survey on various evolutionary algorithms on {GPU}},
+  author={Singh, Satvir and Kaur, Jaspreet and Sinha, Rashmi Sharan},
+  booktitle={International Conference on Communication, Computing and Systems},
+  pages={83--88},
+  year={2014}
+}
+@inproceedings{luong2010gpu,
+  title={{GPU}-based island model for evolutionary algorithms},
+  author={Luong, Th{\'e} Van and Melab, Nouredine and Talbi, El-Ghazali},
+  booktitle={Proceedings of the 12th annual conference on Genetic and evolutionary computation},
+  pages={1089--1096},
+  year={2010}
+}
+@article{alba2002parallelism,
+  title={Parallelism and evolutionary algorithms},
+  author={Alba, Enrique and Tomassini, Marco},
+  journal={IEEE transactions on evolutionary computation},
+  volume={6},
+  number={5},
+  pages={443--462},
+  year={2002},
+  publisher={IEEE}
+}
+
+@article{bi_control_2020,
+	abstract = {Symmetries play very important in the dynamics of robot systems. The relevant control of robot arm motion with fault diagnosis including the optimized fuzzy algorithm based on the error rate adjustment P, I, D value (Fuzzy PID algorithm) model relies on symmetry principles. A robot is a kind of mechanical device that can program and perform certain operations and mobile tasks under automatic control. The manipulator is a very complex multi-input multi-output non-linear system and the main actuator of the robot. This paper focuses on the design of a control algorithm for a two-degree-of-freedom (2-DOF) manipulator. First, the mathematical model of a 2-DOF articulated manipulator is established, that is, the functional relationship between the input driving force vector and the output rotation angle vector of a 2-DOF manipulator. Then, a set of trajectory planning algorithms are designed by using gradient model control, which can calculate the trajectory of the end-effector of a 2-DOF manipulator according to the user's task requirements. The experimental results verify the effectiveness of the proposed algorithm.},
+	author = {Bi, Meng},
+	date-added = {2022-10-25 7:29:59 a.m. -0700},
+	date-modified = {2022-10-25 7:29:59 a.m. -0700},
+	doi = {10.3390/sym12040665},
+	file = {Full Text:/Users/mario/Zotero/storage/858P6TFS/Bi - 2020 - Control of Robot Arm Motion Using Trapezoid Fuzzy .pdf:application/pdf},
+	issn = {2073-8994},
+	journal = {Symmetry},
+	language = {en},
+	month = {April},
+	number = {4},
+	pages = {665},
+	title = {Control of {Robot} {Arm} {Motion} {Using} {Trapezoid} {Fuzzy} {Two}-{Degree}-of-{Freedom} {PID} {Algorithm}},
+	url = {https://www.mdpi.com/2073-8994/12/4/665},
+	urldate = {2021-12-10},
+	volume = {12},
+	year = {2020},
+	bdsk-url-1 = {https://www.mdpi.com/2073-8994/12/4/665},
+	bdsk-url-2 = {https://doi.org/10.3390/sym12040665}}
+
+@article{Xu2021A-Model-Predict,
+	author = {Xu, Ying and Tang, Wentao and Chen, Biyun and Qiu, Li and Yang, Rong},
+	date-added = {2022-10-25 7:29:59 a.m. -0700},
+	date-modified = {2022-10-25 7:43:39 a.m. -0700},
+	journal = {Symmetry},
+	note = {Publisher: Multidisciplinary Digital Publishing Institute},
+	number = {3},
+	pages = {381},
+	title = {A {Model} {Predictive} {Control} with {Preview}-{Follower} {Theory} {Algorithm} for {Trajectory} {Tracking} {Control} in {Autonomous} {Vehicles}},
+	volume = {13},
+	year = {2021}}
+
+@article{zhong_path_2021,
+	author = {Zhong, Chong-Quan and Wang, Lin and Xu, Chuan-Fang},
+	date-added = {2022-10-25 7:29:59 a.m. -0700},
+	date-modified = {2022-10-25 7:29:59 a.m. -0700},
+	journal = {Symmetry},
+	note = {Publisher: Multidisciplinary Digital Publishing Institute},
+	number = {7},
+	pages = {1118},
+	title = {Path {Tracking} of {Permanent} {Magnet} {Synchronous} {Motor} {Using} {Fractional} {Order} {Fuzzy} {PID} {Controller}},
+	volume = {13},
+	year = {2021}}
+
+@article{castillo_review_2012,
+	author = {Castillo, Oscar and Melin, Patricia},
+	date-added = {2022-10-25 7:29:59 a.m. -0700},
+	date-modified = {2022-10-25 7:29:59 a.m. -0700},
+	doi = {10.1016/j.asoc.2011.12.010},
+	issn = {15684946},
+	journal = {Applied Soft Computing},
+	language = {en},
+	month = {April},
+	number = {4},
+	pages = {1267--1278},
+	title = {A review on the design and optimization of interval type-2 fuzzy controllers},
+	url = {https://linkinghub.elsevier.com/retrieve/pii/S1568494611004947},
+	urldate = {2021-12-10},
+	volume = {12},
+	year = {2012},
+	bdsk-url-1 = {https://linkinghub.elsevier.com/retrieve/pii/S1568494611004947},
+	bdsk-url-2 = {https://doi.org/10.1016/j.asoc.2011.12.010}}
+
+@article{kim_trajectory_2015,
+	author = {Kim, Jeong-Jung and Lee, Ju-Jang},
+	date-added = {2022-10-25 7:29:59 a.m. -0700},
+	date-modified = {2022-10-25 7:29:59 a.m. -0700},
+	journal = {IEEE Transactions on Industrial Informatics},
+	note = {Publisher: IEEE},
+	number = {3},
+	pages = {620--631},
+	title = {Trajectory optimization with particle swarm optimization for manipulator motion planning},
+	volume = {11},
+	year = {2015}}
+
+@article{lee_practical_2003,
+	author = {Lee, TH and Lam, HK and Leung, Frank HF and Tam, Peter KS},
+	date-added = {2022-10-25 7:29:59 a.m. -0700},
+	date-modified = {2022-10-25 7:29:59 a.m. -0700},
+	journal = {IEEE Control Systems Magazine},
+	note = {Publisher: IEEE},
+	number = {2},
+	pages = {60--65},
+	title = {A practical fuzzy logic controller for the path tracking of wheeled mobile robots},
+	volume = {23},
+	year = {2003}}
+
+@inproceedings{Baltes1999A-fuzzy-logic-c,
+	author = {Baltes, Jacky and Otte, Robin},
+	booktitle = {Proceedings 1999 {IEEE} {International} {Symposium} on {Computational} {Intelligence} in {Robotics} and {Automation}. {CIRA}'99 ({Cat}. {No}. {99EX375})},
+	date-added = {2022-10-25 7:29:59 a.m. -0700},
+	date-modified = {2022-10-25 7:42:41 a.m. -0700},
+	pages = {89--94},
+	publisher = {IEEE},
+	title = {A fuzzy logic controller for car-like mobile robots},
+	year = {1999}}
+
+@inproceedings{Bentalba1997Fuzzy-control,
+	author = {Bentalba, S and El Hajjaji, A and Rachid, A},
+	booktitle = {Proceedings of the 1997 {IEEE} {International} {Conference} on {Control} {Applications}},
+	date-added = {2022-10-25 7:29:59 a.m. -0700},
+	date-modified = {2022-10-25 7:48:46 a.m. -0700},
+	pages = {69--72},
+	publisher = {IEEE},
+	title = {Fuzzy control of a mobile robot: a new approach},
+	year = {1997}}
+
+@article{maaref_sensor-based_2000,
+	author = {Maaref, H and Barret, C},
+	date-added = {2022-10-25 7:29:59 a.m. -0700},
+	date-modified = {2022-10-25 7:29:59 a.m. -0700},
+	journal = {Control Engineering Practice},
+	note = {Publisher: Elsevier},
+	number = {7},
+	pages = {757--768},
+	title = {Sensor-based fuzzy navigation of an autonomous mobile robot in an indoor environment},
+	volume = {8},
+	year = {2000}}
+
+@book{driankov_introduction_2013,
+	author = {Driankov, Dimiter and Hellendoorn, Hans and Reinfrank, Michael},
+	date-added = {2022-10-25 7:29:59 a.m. -0700},
+	date-modified = {2022-10-25 7:29:59 a.m. -0700},
+	publisher = {Springer Science \& Business Media},
+	title = {An introduction to fuzzy control},
+	year = {2013}}
+
+
+@book{Driankov2013Fuzzy,
+	author = {Driankov, Dimiter and Saffiotti, Alessandro},
+	date-added = {2022-10-25 7:29:59 a.m. -0700},
+	date-modified = {2022-11-01 10:42:25 a.m. -0700},
+	publisher = {Physica},
+	title = {Fuzzy logic techniques for autonomous vehicle navigation},
+	volume = {61},
+	year = {2013}}
+
+@inproceedings{yang_improved_2003,
+	author = {Yang, Xiaoyu and Moallem, Mehrdad and Patel, Rajni V},
+	booktitle = {Proceedings 2003 {IEEE}/{RSJ} {International} {Conference} on {Intelligent} {Robots} and {Systems} ({IROS} 2003)({Cat}. {No}. {03CH37453})},
+	date-added = {2022-10-25 7:29:59 a.m. -0700},
+	date-modified = {2022-10-25 7:29:59 a.m. -0700},
+	pages = {1709--1714},
+	publisher = {IEEE},
+	title = {An improved fuzzy logic based navigation system for mobile robots},
+	volume = {2},
+	year = {2003}}
+
+@inproceedings{Salem2018Evolving,
+	author = {Mohammed Salem and Antonio Miguel Mora and Juan Juli{\'{a}}n Merelo Guerv{\'{o}}s and Pablo Garc{\'{\i}}a{-}S{\'{a}}nchez},
+	bibsource = {dblp computer science bibliography, https://dblp.org},
+	biburl = {https://dblp.org/rec/conf/evoW/SalemMGG18.bib},
+	booktitle = {Applications of Evolutionary Computation - 21st International Conference, EvoApplications 2018, Parma, Italy, April 4-6, 2018, Proceedings},
+	date-added = {2022-10-25 7:29:59 a.m. -0700},
+	date-modified = {2022-11-08 7:13:41 a.m. -0800},
+	doi = {10.1007/978-3-319-77538-8\_24},
+	editor = {Kevin Sim and Paul Kaufmann},
+	pages = {342--357},
+	publisher = {Springer},
+	series = {Lecture Notes in Computer Science},
+	timestamp = {Sat, 19 Oct 2019 20:31:03 +0200},
+	title = {Evolving a {TORCS} Modular Fuzzy Driver Using Genetic Algorithms},
+	volume = {10784},
+	year = {2018},
+	bdsk-url-1 = {https://doi.org/10.1007/978-3-319-77538-8%5C_24}}
+
+@article{jiang2016review,
+  title={A review of fuzzy logic and neural network based intelligent control design for discrete-time systems},
+  author={Jiang, Yiming and Yang, Chenguang and Ma, Hongbin},
+  journal={Discrete Dynamics in Nature and Society},
+  volume={2016},
+  year={2016},
+  publisher={Hindawi}
+}
+
+@article{veeramachaneni2015flexgp,
+  title={FlexGP},
+  author={Veeramachaneni, Kalyan and Arnaldo, Ignacio and Derby, Owen and O’Reilly, Una-May},
+  journal={Journal of Grid Computing},
+  volume={13},
+  number={3},
+  pages={391--407},
+  year={2015},
+  publisher={Springer}
+}
+
+@inproceedings{kiraz2022comparison,
+  title={Comparison of {ML} algorithms to detect vulnerabilities of {RPL}-based {IoT} devices in intelligent and fuzzy systems},
+  author={Kiraz, Murat Ugur and Yilmaz, Atinc},
+  booktitle={International Conference on Intelligent and Fuzzy Systems},
+  pages={254--262},
+  year={2022},
+  organization={Springer}
+}
