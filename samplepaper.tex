@@ -161,13 +161,15 @@ we set the number of populations (islands) to seven, each with a population
 size of nine. Each worker will execute four iterations (generations) of the
 algorithm. All populations will complete four cycles; this means they will pass
 through the mixer module four times. As a result, the total number of function
-evaluations is 1008. About the same as the sequential, single-population
+evaluations is 1008. About % ? same order of magnitude? Exact same number? - JJ
+the same as the sequential, single-population
 versions. The results are shown in Table~\ref{tab:speedup}.
 
 
 \begin{table}[]
 \caption{
-    Results from 30 observations of the execution time for each of the
+  Results % time to solution? 
+  from 30 observations of the execution time for each of the
     presented algorithms. The execution time is expressed in seconds. The table
     shows the results for the sequential (first two columns) and distributed
     versions of the multi-population-based algorithms: GA, PSO, and the combined
@@ -189,7 +191,7 @@ versions. The results are shown in Table~\ref{tab:speedup}.
     \hline
 Avg.   & 1999.34 & 2851.61 & 421.67 & 415.64 & 431.52 & 395.75 & 415.79 & 409.90 \\
     \hline
-StD.   & 82.44   & 278.73  & 28.54           & 23.47                    & 22.60           & 26.54           & 20.47           & 24.85    \\
+StdD.   & 82.44   & 278.73  & 28.54           & 23.47                    & 22.60           & 26.54           & 20.47           & 24.85    \\
     \hline
 Min    & 1876.40 & 2457.98 & 364.65          & 365.81                   & 394.61          & 340.65          & 374.83          & 372.20   \\
     \hline
@@ -201,13 +203,16 @@ Max    & 2253.71 & 3822.01 & 526.76          & 467.47                   & 478.80
 
 \section{Concluding Remarks}
 
-These results confirm that a multi-population-based strategy offers a
-convenient speedup while keeping the results very similar to their sequential
-counterparts. Moreover, the combined algorithm offers better execution times,
+These results confirm that a multi-population-based strategy offers a convenient
+speedup % with what? - JJ
+while keeping the results very similar to their sequential
+counterparts. % no loss of algorithmic performance, then? - JJ
+Moreover, the combined algorithm offers better % than what?
+execution times,
 combining the continuous optimization capabilities of a PSO algorithm with the
-faster GA metaheuristic. Moreover, the randomized configuration parameters
-heterogeneous strategy gave better execution times when using the PSO-GA
-variant.
+faster GA metaheuristic. Moreover, the heterogeneous strategy that used
+randomized configuration parameters gave better execution times when using the
+PSO-GA variant.
 
 %
 % the environments 'definition', 'lemma', 'proposition', 'corollary',
