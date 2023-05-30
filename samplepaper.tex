@@ -162,14 +162,15 @@ size of nine. Each worker will execute four iterations (generations) of the
 algorithm. All populations will complete four cycles; this means they will pass
 through the mixer module four times. As a result, the total number of function
 evaluations is 1008. About % ? same order of magnitude? Exact same number? - JJ
-the same as the sequential, single-population
-versions. The results are shown in Table~\ref{tab:speedup}.
+% same number, it was mentioned at few sentences back. - M
+the same as the sequential, single-population 
+versions (1000 iterations). The results are shown in Table~\ref{tab:speedup}.
 
 
 \begin{table}[]
 \caption{
-  Results % time to solution? 
-  from 30 observations of the execution time for each of the
+  Time to solution results % time to solution?  yes, - M  
+  from 30 observations for each of the
     presented algorithms. The execution time is expressed in seconds. The table
     shows the results for the sequential (first two columns) and distributed
     versions of the multi-population-based algorithms: GA, PSO, and the combined
@@ -204,13 +205,13 @@ Max    & 2253.71 & 3822.01 & 526.76          & 467.47                   & 478.80
 \section{Concluding Remarks}
 
 These results confirm that a multi-population-based strategy offers a convenient
-speedup % with what? - JJ
-while keeping the results very similar to their sequential
-counterparts. % no loss of algorithmic performance, then? - JJ
-Moreover, the combined algorithm offers better % than what?
-execution times,
-combining the continuous optimization capabilities of a PSO algorithm with the
-faster GA metaheuristic. Moreover, the heterogeneous strategy that used
+speedup compared with the sequential versions % with what? - JJ
+with no loss of algorithmic performance. % no loss of algorithmic performance, then? - JJ  yes - M 
+% Moreover, the combined algorithm offers better % than what?  Ok - M
+%execution times than the single algorithm alternatives.
+Moreover, combining the continuous optimization capabilities of a PSO algorithm with the
+faster GA metaheuristic offers better execution times than the single algorithm alternatives.
+Finally, the heterogeneous strategy that used
 randomized configuration parameters gave better execution times when using the
 PSO-GA variant.
 
