@@ -14,7 +14,7 @@
 
 \begin{document}
 %
-\title{ Distributed population-based optimization for a fuzzy path tracking controller}
+\title{Distributed population-based optimization for a fuzzy path tracking controller}
 %
 \titlerunning{Distributed population-based optimization}
 % If the paper title is too long for the running head, you can set
@@ -37,22 +37,22 @@ Department of Computer Engineering, Robotics and Automation, University of Grana
 \maketitle              % typeset the header of the contribution
 %
 \begin{abstract}
-    We propose a distributed bio-inspired algorithm to optimize the parameters
-    of a fuzzy controller, using a multi-population multi-algorithmic approach.
-    The proposed algorithm can mix different metaheuristics, one for each
-    population, with the aim of keeping the total population diversity high. To validate the
-    speed-up benefit of our proposal, we optimized the membership functions of
-    a fuzzy controller for the trajectory tracking of a mobile autonomous robot
-    using populations running only Genetic Algorithms and Particle Swarm
-    Optimization, and a mixed configuration where both algorithms run at the same time. Results indicate
-    that even when we use random heterogeneous parameter configuration for the
-    distributed populations, we obtain an error similar to other works while
-    significantly reducing the execution time. 
-    \textit{ 
-     This is a summary of our work
-    ``Distributed and asynchronous population-based optimization applied to the
-    optimal design of fuzzy controllers'' published in Symmetry in 2023. \cite{garcia2023}} 
-\keywords{Fuzzy Control  \and Bio-inpired Algorithms \and Distribuited Algorithms.}
+  We propose a distributed bio-inspired algorithm that optimizes the parameters
+  of a fuzzy controller, using a multi-population multi-algorithmic approach.
+  The proposed algorithm can mix different metaheuristics, one for each
+  population, with the aim of keeping the total population diversity high. To
+  validate the speed-up benefit of our proposal, we optimized the membership
+  functions of a fuzzy controller for tracking the trajectory of a mobile
+  autonomous robot using populations running only Genetic Algorithms and
+  Particle Swarm Optimization, and a mixed configuration where both algorithms
+  run at the same time. Results indicate that even when we use random
+  heterogeneous parameter configuration for the distributed populations, we
+  obtain an error similar to other works while significantly reducing the
+  execution time.  \textit{ This is a summary of our work ``Distributed and
+    asynchronous population-based optimization applied to the optimal design of
+    fuzzy controllers'' published in Symmetry in 2023. \cite{garcia2023}}
+  \keywords{Fuzzy Control \and Bio-inspired Algorithms \and Distributed
+    Algorithms.}
 \end{abstract}
 %
 %
@@ -60,9 +60,9 @@ Department of Computer Engineering, Robotics and Automation, University of Grana
 \section{Introduction}
 
 Fuzzy logic control has been one of the most successful intelligent control
-techniques \cite{Driankov2013Fuzzy}. One advantage being the use of a fuzzy
-inference system (FIS) that models the system using fuzzy rules as the
-knowladge base. These rules have human interpretation but need to be
+techniques \cite{Driankov2013Fuzzy},  one of its advantages being the use of a fuzzy
+inference system (FIS) that creates a model with fuzzy rules as the
+knowledge base. These rules have human interpretation but need to be
 automatically or manually tuned, to handle the particularities of real-world
 problems. In the case of FISs, the core components are the fuzzy propositions
 constructing the fuzzy rules, these propositions are, in turn, constructed
@@ -94,7 +94,7 @@ sends the evolved population ($X_{j+1}$) to the \emph{mixer}. The the
 \emph{mixer} swaps some candidate solutions between two populations, changing
 their state again and sending the resulting populations again to the input
 message queue to be processed again by some worker, closing the cycle. Each
-population has several parameters, including the algoritm to be executed on
+population has several parameters, including the algorithm to be executed on
 that particular population, and the parameters of that metaheuristic. A single
 population is executed several times during the lifetime of the algorithm, and
 this number is limited by the parameter $nc$ (number of cycles).  A schematic
@@ -129,14 +129,14 @@ We used 15 parameters for the MFs. To test each controller, they had to guide
 the robot thru three paths. These paths where defined using a cubic splines.
 The average RMSE obtained from these simulations are the fitness of each 
 controller. We selected the GA and PSO algorithms for the multi-population-based
-algorithms, we selected the GA as lower-end algorithm specilized in conbinatorial 
+algorithms, we selected the GA as lower-end algorithm specialized in combinatorial 
 optimization and on the other hand, the PSO algorithm which had the best results in
 previous experiments. Furthermore, in previous works, but using
 continuous optimization benchmarks, the combination of both metaheuristics
 performed better than any of them in isolation.
 
-When selecting the mataheuristic's parameters, we also experimented with two
-strategies, one stablishing the same parameters for all populations, these
+When selecting the metaheuristics parameters, we also experimented with two
+strategies, one establishing the same parameters for all populations, these
 parameters are selected after running more than 30 trial experiments, we call
 this an homogeneous parametrization. The other option is using a heterogeneous
 strategy proposed by Gong et al. \cite{gong2011distributed} that randomly sets
