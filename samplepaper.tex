@@ -66,7 +66,7 @@ knowledge base. These rules have human interpretation but need to be
 automatically or manually tuned, to handle the particularities of real-world
 problems. In the case of FISs, the core components are the fuzzy propositions
 constructing the fuzzy rules, these propositions are, in turn, constructed
-using fuzzy variables and fuzzy terms that are defined using MFs. Optimizing
+using fuzzy variables and fuzzy terms that are defined using Membership Functions (MFs). Optimizing
 the MFs parameters is challenging; as we need to execute one or more
 simulations to establish the performance of just one configuration.
 
@@ -90,7 +90,7 @@ In this model, we have a  multi-population cycle in which a set of populations
 $P$, each in a current state $j$, and a set ($W$) of $w$ workers, is added to a
 message queue. Then each population ($population_{i}$) is pulled set of
 populations by one of the workers. Then, after executing a metaheuristic, it
-sends the evolved population ($X_{j+1}$) to the \emph{mixer}. The the
+sends the evolved population ($X_{j+1}$) to the \emph{mixer}. The 
 \emph{mixer} swaps some candidate solutions between two populations, changing
 their state again and sending the resulting populations again to the input
 message queue to be processed again by some worker, closing the cycle. Each
@@ -110,7 +110,7 @@ current state $j$, and a set ($W$) of $w$ workers. Each population
 metaheuristic, it sends the evolved population ($X_{j+1}$) to the
 \emph{mixer}. In turn, the \emph{mixer} swaps some candidate
 solutions between two populations, changing their state again and sending the
-resulting populations again to be processed by workers, closing the cycle.
+resulting populations once more to be processed by workers, closing the cycle.
 }\label{fig:worker-pop}
 \end{figure}
 
@@ -118,7 +118,7 @@ resulting populations again to be processed by workers, closing the cycle.
 
 To validate the algorithm’s speed-up and optimization capabilities, we selected
 the computationally demanding task of tuning a path-tracking fuzzy controller
-for a bicycle-like mobile robot. The fuzzy controller we optimize in this work
+for a bicycle-like mobile robot. The fuzzy controller we optimized in this work
 has two input variables $\theta_e$ and $e$, indicating the angular error and
 the distance  to the desired path. The controller has a single output $\omega$,
 used for steering the front wheel. All three variables have the same
@@ -126,19 +126,19 @@ granularity using five fuzzy terms: \emph{high negative}, \emph{medium
 negative}, \emph{low}, \emph{medium positive}, and \emph{high positive}. The
 sign of the error indicates if the angle is to the left or right of the path.
 We used 15 parameters for the MFs. To test each controller, they had to guide
-the robot thru three paths. These paths where defined using a cubic splines.
-The average RMSE obtained from these simulations are the fitness of each 
+the robot through three paths defined using cubic splines.
+The average RMSE obtained from these simulations is the fitness of each 
 controller. We selected the GA and PSO algorithms for the multi-population-based
 algorithms, we selected the GA as lower-end algorithm specialized in combinatorial 
-optimization and on the other hand, the PSO algorithm which had the best results in
+optimization and, on the other hand, the PSO algorithm which had the best results in
 previous experiments. Furthermore, in previous works, but using
 continuous optimization benchmarks, the combination of both metaheuristics
-performed better than any of them in isolation.
+performed better than any of them alone.
 
 When selecting the metaheuristics parameters, we also experimented with two
 strategies, one establishing the same parameters for all populations, these
 parameters are selected after running more than 30 trial experiments, we call
-this an homogeneous parametrization. The other option is using a heterogeneous
+this a homogeneous parametrization. The other option is using a heterogeneous
 strategy proposed by Gong et al. \cite{gong2011distributed} that randomly sets
 the parameters of each population. For the GA, we used a tournament selection
 with ($k=3$), a Gaussian mutation with $\mu = 0.0$ and $\sigma = 0.2$, and a
@@ -188,11 +188,11 @@ versions (1000 iterations). The results are shown in Table~\ref{tab:speedup}.
     \cline{4-6} \cline{7-9}
        & \multicolumn{1}{c}{GA} & \multicolumn{1}{c}{PSO} &\multicolumn{1}{c}{GA} & \multicolumn{1}{c}{PSO} & \multicolumn{1}{c}{PSO-GA} &\multicolumn{1}{c}{GA} & \multicolumn{1}{c}{PSO} & \multicolumn{1}{c}{PSO-GA}\\
     \hline
-    Speedup & \multicolumn{1}{c}{-} & \multicolumn{1}{c}{-} & 4.74 & 6.86 & 6.60 & 5.05 & 6.84 & \underline{6.95} \\
+    Speed-up & \multicolumn{1}{c}{-} & \multicolumn{1}{c}{-} & 4.74 & 6.86 & 6.60 & 5.05 & 6.84 & \underline{6.95} \\
     \hline
 Avg.   & 1999.34 & 2851.61 & 421.67 & 415.64 & 431.52 & 395.75 & 415.79 & 409.90 \\
     \hline
-StdD.   & 82.44   & 278.73  & 28.54           & 23.47                    & 22.60           & 26.54           & 20.47           & 24.85    \\
+STDs.   & 82.44   & 278.73  & 28.54           & 23.47                    & 22.60           & 26.54           & 20.47           & 24.85    \\
     \hline
 Min    & 1876.40 & 2457.98 & 364.65          & 365.81                   & 394.61          & 340.65          & 374.83          & 372.20   \\
     \hline
@@ -205,7 +205,7 @@ Max    & 2253.71 & 3822.01 & 526.76          & 467.47                   & 478.80
 \section{Concluding Remarks}
 
 These results confirm that a multi-population-based strategy offers a convenient
-speedup compared with the sequential versions % with what? - JJ
+speed-up compared with the sequential versions % with what? - JJ
 with no loss of algorithmic performance. % no loss of algorithmic performance, then? - JJ  yes - M 
 % Moreover, the combined algorithm offers better % than what?  Ok - M
 %execution times than the single algorithm alternatives.
