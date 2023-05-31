@@ -104,13 +104,11 @@ messages from a queue and executes the specified metaheuristic.
 
 \begin{figure}
 \includegraphics[width=\textwidth]{images/worker-pop}
-    \caption{ The multi-population cycle consists of a set of populations $P$, each in a
-current state $j$, and a set ($W$) of $w$ workers. Each population
-($population_{i}$) is received by one of the workers. Then, after executing a
-metaheuristic, it sends the evolved population ($X_{j+1}$) to the
-\emph{mixer}. In turn, the \emph{mixer} swaps some candidate
-solutions between two populations, changing their state again and sending the
-resulting populations once more to be processed by workers, closing the cycle.
+\caption{ Our algorithm includes a set of populations $P$ in a current state $j$
+  and a set of workers, which process ($population_{i}$) sending the evolved
+  population to the \emph{mixer}, which swaps some candidate solutions between
+  two populations, changing their state again and sending the resulting
+  populations once more to be processed by workers, closing the cycle.
 }\label{fig:worker-pop}
 \end{figure}
 
@@ -169,8 +167,7 @@ versions (1000 iterations). The results are shown in Table~\ref{tab:speedup}.
 
 \begin{table}[]
 \caption{
-  Time to solution results % time to solution?  yes, - M  
-  from 30 observations for each of the
+  Time to solution in 30 observations for each of the
     presented algorithms. The execution time is expressed in seconds. The table
     shows the results for the sequential (first two columns) and distributed
     versions of the multi-population-based algorithms: GA, PSO, and the combined
@@ -205,15 +202,12 @@ Max    & 2253.71 & 3822.01 & 526.76          & 467.47                   & 478.80
 \section{Concluding Remarks}
 
 These results confirm that a multi-population-based strategy offers a convenient
-speed-up compared with the sequential versions % with what? - JJ
-with no loss of algorithmic performance. % no loss of algorithmic performance, then? - JJ  yes - M 
-% Moreover, the combined algorithm offers better % than what?  Ok - M
-%execution times than the single algorithm alternatives.
-Moreover, combining the continuous optimization capabilities of a PSO algorithm with the
-faster GA metaheuristic offers better execution times than the single algorithm alternatives.
-Finally, the heterogeneous strategy that used
-randomized configuration parameters gave better execution times when using the
-PSO-GA variant.
+speed-up compared with the sequential versions with no loss of algorithmic
+performance.  Moreover, combining the continuous optimization capabilities of a
+PSO algorithm with the faster GA metaheuristic offers better execution times
+than the single algorithm alternatives.  Finally, the heterogeneous strategy
+that used randomized configuration parameters gave better execution times when
+using the PSO-GA variant.
 
 %
 % the environments 'definition', 'lemma', 'proposition', 'corollary',
